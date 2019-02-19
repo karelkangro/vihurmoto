@@ -10,7 +10,7 @@ class BlogRoll extends React.Component {
 
     return (
       <div className="columns is-multiline">
-      {posts && (posts
+        {posts && (posts
           .map(({ node: post }) => (
             <div
               className="is-parent column is-6"
@@ -29,13 +29,14 @@ class BlogRoll extends React.Component {
                 <br />
                 <br />
                 <Link className="button" to={post.fields.slug}>
-                  Keep Reading →
+                  Ava uudis →
                 </Link>
               </p>
               </article>
             </div>
-          )))}
-          </div>
+          )))
+        }
+      </div>
     );
   }
 }

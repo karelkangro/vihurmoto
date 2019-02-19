@@ -1,23 +1,30 @@
 ---
 templateKey: 'blog-post'
-title: 'Testpostituse pealkiri'
-date: 2017-01-04T15:04:10.000Z
+title: 'Tähelepanu! Vihurmoto mootorid käivituvad!'
+date: 2016-02-02
 description: >-
-  Kirjeldus.
 tags:
   - vihurmoto
-  - ringrada
-  - koolitus
 ---
 
-We expect the shipment of a limited quantity of green beans next Monday. We’ll be offering the roasted beans from Tuesday, but quantities are limited, so be quick.
+## Tere tulemast!
 
-Blue Mountain Peak is the highest mountain in Jamaica and one of the highest peaks in the Caribbean at 7,402 ft. It is the home of Blue Mountain coffee and their famous tours. It is located on the border of the Portland and Saint Thomas parishes of Jamaica.
+Oleme selle kodulehe valmis müristanud sinu jaoks, hea motohuviline, ja kallutame üsna peagi siin internetiringil kurvist täisgaasiga sirgele välja - proovi ainult sabas püsida!
 
-## Ajalugu
+Meie kodurajaks ja majaks saab olema Auto24 Ring, mis asub Pärnu külje all Audrus. Tulge kindlasti meile algaval motohooajal külla, kohe avame uksed ja seda otse ringraja ääres.
 
->Some of the plants found on the Blue Mountain cannot be found anywhere else in the world and they are often of a dwarfed sort.
+Vihur on nimi, mis pole Eestis tundmatu, seda eriti motoelu elavatele inimeste jaoks. Aga uuele pealekasvavale generatsioonile on ilmselt paslik aeg meeldetuletuseks, mis kunagi selle vägeva nime taga ikkagi toimus ja miks just meie nüüd tunneme, et on õige aeg Vihuri tuulest välja hüpata ja kuulus nimi uuele ringile vedada.
 
-## Veel üks pealkiri
+Enne veel, kui koos sadulasse kargame ja sõitu alustame, vaata meie värskel lehel ringi.
 
-Jamaican Blue Mountain Coffee or Jamaica Blue Mountain Coffee is a classification of coffee grown in the Blue Mountains of Jamaica. The best lots of Blue Mountain coffee are noted for their mild flavor and lack of bitterness. Over the past few decades, this coffee has developed a reputation that has made it one of the most expensive and sought-after coffees in the world. Over 80% of all Jamaican Blue Mountain Coffee is exported to Japan. In addition to its use for brewed coffee, the beans are the flavor base of Tia Maria coffee liqueur.
+Niipea, kui lumi on läinud ja õhk soojeneb, alustame sõidukoolitustega üle Eesti, samuti anname sel suvel süüdet Vihurmoto noortesarjale,kus spordihuvilised lapsed saavad tsiklisõiduga varakult tutvust teha ja erinevatel Eesti ringradadel võidugi sõita. Viimast teeb ka meie enda Vihurmoto tiim.
+
+Lõpetuseks, kui sa pole just suurem võidusõiduhuviline, kuid oma motikas kangastub sulle siiski juba pikemat aega nii unes kui ilmsi, siis saame sind aidata sinu unistuste täideviimisel. Nimelt ehitame oma graraažis ainulaadseid mootorrattaid kasvõi otsast-lõpuni täpselt tellija soovide järgi. Cafe racer, scrambler, tracker - need nimed pole ju sulle võõrad? Sina tellid, meie teeme.
+
+Tallinn Motor Show'le ikka tuled? Meie oleme kohal ja esitleme ühte väga erilist mootorratast!
+
+Parimate soovidega ja kohtumisteni!
+
+Jüri Randla & Marko Rohtlaan
+
+VIHURMOTO
