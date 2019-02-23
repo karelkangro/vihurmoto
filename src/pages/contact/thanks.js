@@ -3,9 +3,9 @@ import Layout from '../../components/Layout'
 
 export default () => (
   <Layout>
-    <section className="section">
-      <div className="container">
-        <div className="content">
+    <section>
+      <div>
+        <div>
           <h1>Suur tänu!</h1>
           <p>Vormitäis infot sai kenasti saadetud.</p>
         </div>

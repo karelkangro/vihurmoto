@@ -9,29 +9,23 @@ class BlogRoll extends React.Component {
     const { edges: posts } = data.allMarkdownRemark
 
     return (
-      <div className="columns is-multiline">
+      <div>
         {posts && (posts
           .map(({ node: post }) => (
             <div
-              className="is-parent column is-6"
               key={post.id}
             >
-            <article class="tile is-child box notification">
-              <p>
-                <Link className="title has-text-primary is-size-4" to={post.fields.slug}>
+            <article>
+              <h1>
+                <Link to={post.fields.slug}>
                   {post.frontmatter.title}
                 </Link>
-                <span> &bull; </span>
-                <p className="subtitle is-size-5">{post.frontmatter.date}</p>
-              </p>
-              <p>
-                {post.excerpt}
-                <br />
-                <br />
-                <Link className="button" to={post.fields.slug}>
-                  Ava uudis →
-                </Link>
-              </p>
+              </h1>
+              <h2>{post.frontmatter.date}</h2>
+              {post.excerpt}
+              <Link to={post.fields.slug}>
+                  Ava uudis <span role="img" aria-label="emoticon-hand">👆</span>
+              </Link>
               </article>
             </div>
           )))

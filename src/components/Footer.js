@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from 'gatsby'
-
 import logo from '../img/logo.svg'
 import facebook from '../img/social/facebook.svg'
 import instagram from '../img/social/instagram.svg'
@@ -8,33 +7,31 @@ import instagram from '../img/social/instagram.svg'
 const Footer = class extends React.Component {
   render() {
     return (
-      <footer className="footer has-background-black has-text-white-ter">
-        <div className="content has-text-centered">
+      <footer>
+        <div>
           <img
             src={logo}
             alt="Vihurmoto"
-            style={{ width: '14em', height: 'auto' }}
           />
         </div>
-        <div className="content has-text-centered has-background-black has-text-white-ter">
-          <div className="container has-background-black has-text-white-ter">
-              <div className="columns">
-                <div className="column is-4">
-                <section className="menu">
-                    <ul className="menu-list">
-                      <li><Link to="/" className="navbar-item">Avaleht</Link></li>
-                      <li><Link className="navbar-item" to="/about">Meist</Link></li>
-                      <li><Link className="navbar-item" to="/products">
+        <div>
+          <div>
+              <div >
+                <div>
+                <section>
+                    <ul>
+                      <li><Link to="/">Avaleht</Link></li>
+                      <li><Link to="/about">Meist</Link></li>
+                      <li><Link to="/products">
                         Products
                       </Link>
                     </li>
                     <li>
-                    <Link className="navbar-item" to="/contact/examples">
+                    <Link to="/contact/examples">
                       Kontakt
                     </Link>
                     </li>
                     <li><a
-                      className="navbar-item"
                       href="/admin/"
                       target="_blank"
                       rel="noopener noreferrer"
@@ -44,35 +41,33 @@ const Footer = class extends React.Component {
                     </ul>
                   </section>
                 </div>
-                <div className="column is-4">
+                <div>
                 <section>
-                  <ul className="menu-list">
+                  <ul >
                   <li>
-                    <Link className="navbar-item" to="/blog">
+                    <Link to="/blog">
                       Viimased postitused
                     </Link>
                   </li>
                   <li>
-                    <Link className="navbar-item" to="/contact">
+                    <Link to="/contact">
                       Kontakt
                     </Link>
                   </li>
                   </ul>
                 </section>
                 </div>
-                <div className="column is-4 social">
+                <div>
                   <a title="facebook" href="https://facebook.com">
                     <img 
                       src={facebook}
                       alt="Facebook"
-                      style={{ width: '1em', height: '1em' }}
                     />
                   </a>
                   <a title="instagram" href="https://instagram.com">
                     <img
                     src={instagram}
                     alt="Instagram"
-                    style={{ width: '1em', height: '1em' }}
                     />
                   </a>
                 </div>

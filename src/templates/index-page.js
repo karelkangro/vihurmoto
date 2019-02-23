@@ -18,7 +18,6 @@ export const IndexPageTemplate = ({
 }) => (
     <div>
         <div
-          className="full-width-image margin-top-0"
           style={{
             backgroundImage: `url(${
               !!image.childImageSharp
@@ -37,7 +36,6 @@ export const IndexPageTemplate = ({
         alignItems: 'left',
         flexDirection: 'column' }}>
       <h1
-        className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
         style={{
           boxShadow: 'rgb(136,0,0) 0.5rem 0px 0px, rgb(136,0,0) -0.5rem 0px 0px',
           backgroundColor: 'rgb(136,0,0)',
@@ -48,56 +46,56 @@ export const IndexPageTemplate = ({
       >
         {title}
       </h1>
-      <h3 className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
-          style={{
-            boxShadow: 'rgb(136,0,0) 0.5rem 0px 0px, rgb(136,0,0) -0.5rem 0px 0px',
-            backgroundColor: 'rgb(136,0,0)',
-            color: 'white',
-            lineHeight: '1',
-            padding: '0.25em'
-          }}
+      <h3
+        style={{
+          boxShadow: 'rgb(136,0,0) 0.5rem 0px 0px, rgb(136,0,0) -0.5rem 0px 0px',
+          backgroundColor: 'rgb(136,0,0)',
+          color: 'white',
+          lineHeight: '1',
+          padding: '0.25em'
+        }}
       >
         {subheading}
       </h3>
       </div>
     </div>
-  <section className="section section--gradient">
-    <div className="container">
-      <div className="section">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <div className="content">
-              <div className="content">
-                <div className="tile">
-                  <h1 className="title">{mainpitch.title}</h1>
+  <section>
+    <div>
+      <div>
+        <div>
+          <div>
+            <div>
+              <div>
+                <div>
+                  <h1>{mainpitch.title}</h1>
                 </div>
-                <div className="tile">
-                  <h3 className="subtitle">{mainpitch.description}</h3>
+                <div>
+                  <h3>{mainpitch.description}</h3>
                 </div>
               </div>
-              <div className="columns">
-                <div className="column is-12">
-                  <h3 className="has-text-weight-semibold is-size-2">
+              <div>
+                <div>
+                  <h3>
                     {heading}
                   </h3>
                   <p>{description}</p>
                 </div>
               </div>
               <Features gridItems={intro.blurbs} />
-              <div className="columns">
-              <div className="column is-12 has-text-centered">
-                <Link className="btn" to="/products">
+              <div>
+              <div>
+                <Link to="/products">
                   to="/products"
                 </Link>
                 </div>
               </div>
-              <div className="column is-12">
-                  <h3 className="has-text-weight-semibold is-size-2">
-                      Loe blogist, mis teoksil <span role="img" aria-label="image">👇</span>
+              <div>
+                  <h3>
+                    Loe blogist, mis teoksil <span role="img" aria-label="image">👇</span>
                   </h3>
                   <BlogRoll />
-                  <div className="column is-12 has-text-centered">
-                  <Link className="btn" to="/blog">
+                  <div>
+                  <Link to="/blog">
                     Blogi avalehele
                   </Link>
                   </div>

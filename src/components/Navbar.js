@@ -29,56 +29,50 @@ const Navbar = class extends React.Component {
 
   render() {
     return (
-      <nav
-        className="navbar is-transparent"
-        role="navigation"
-        aria-label="main-navigation"
-      >
-        <div className="container">
-          <div className="navbar-brand">
-            <Link to="/" className="navbar-item" title="Logo">
-              <img src={logo} alt="Vihurmoto" class="logo"/>
+      <header>
+        <nav>
+          <div>
+            <Link to="/" title="Logo">
+              <img src={logo} alt="Vihurmoto"/>
             </Link>
-            {/* Hamburger menu */}
-            <div className="navbar-burger burger" data-target="navMenu">
+            <div className="nav-burger burger" data-target="navMenu">
               <span />
               <span />
               <span />
             </div>
           </div>
-          <div id="navMenu" className="navbar-menu">
-            <div className="navbar-start has-text-centered">
-              <Link className="navbar-item" to="/about">
+          <div id="navMenu" className="menu nav__menu">
+            <div>
+              <Link to="/about">
                 Meist
               </Link>
-              <Link className="navbar-item" to="/products">
+              <Link to="/products">
                 Tooted
               </Link>
-              <Link className="navbar-item" to="/blog">
+              <Link to="/blog">
                 Uudised
               </Link>
-              <Link className="navbar-item" to="/contact">
+              <Link to="/contact">
                 Kontakt
               </Link>
-              <Link className="navbar-item" to="/contact/examples">
+              <Link to="/contact/examples">
                 Jäta teade
               </Link>
             </div>
-            <div className="navbar-end has-text-centered">
+            <div>
               <a
-                className="navbar-item"
                 href="https://www.facebook.com/VihurMoto/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <span className="icon">
+                <span>
                   <img src={facebook} alt="Facebook" />
                 </span>
               </a>
             </div>
           </div>
-        </div>
-      </nav>
+        </nav>
+      </header>
     )
   }
 }
