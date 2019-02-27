@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql, StaticQuery } from 'gatsby'
-
+import { H1, H2 } from '../components/styled/typography'
 class BlogRoll extends React.Component {
 
   render() {
@@ -16,15 +16,15 @@ class BlogRoll extends React.Component {
               key={post.id}
             >
             <article>
-              <h1>
+              <H2>
                 <Link to={post.fields.slug}>
                   {post.frontmatter.title}
                 </Link>
-              </h1>
-              <h2>{post.frontmatter.date}</h2>
+              </H2>
+              <p>{post.frontmatter.date}</p>
               {post.excerpt}
               <Link to={post.fields.slug}>
-                  Ava uudis <span role="img" aria-label="emoticon-hand">👆</span>
+                Ava uudis <span role="img" aria-label="emoticon-hand">👆</span>
               </Link>
               </article>
             </div>

@@ -2,6 +2,54 @@ import React from 'react'
 import { Link } from 'gatsby'
 import facebook from '../img/social/facebook.svg'
 import logo from '../img/logo.svg'
+import styled from 'styled-components';
+import colors from './styled/colors';
+import { auto } from 'eol';
+
+const Header = styled.header`
+  height: 100px;
+  background: ${colors.blue};
+  /* box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); */
+`;
+
+const NavbarGrid = styled.nav`
+  display: grid;
+  grid-template-columns: 2fr 10fr;
+  align-items: center;
+  grid-column-gap: 2rem;
+  height: 100%;
+  color: ${colors.white};
+`;
+
+const NavMenu = styled.div`
+  display: grid;
+  grid-template-columns: 11fr 1fr;
+`;
+
+const LogoLink = styled(Link)`
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: auto;
+  background: ${colors.blue};
+
+  & img {
+    width: 100px;
+    height: auto;
+  }
+`;
+
+const NavLink = styled(Link)`
+  font-size: 1rem;
+  padding: .5rem;
+  margin-right: .5rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: ${colors.white};
+  background: ${colors.blue};
+`;
 
 const Navbar = class extends React.Component {
   componentDidMount() {
@@ -29,35 +77,28 @@ const Navbar = class extends React.Component {
 
   render() {
     return (
-      <header>
-        <nav>
-          <div>
-            <Link to="/" title="Logo">
+      <Header>
+        <NavbarGrid>
+            <LogoLink to="/" title="Logo">
               <img src={logo} alt="Vihurmoto"/>
-            </Link>
-            <div className="nav-burger burger" data-target="navMenu">
-              <span />
-              <span />
-              <span />
-            </div>
-          </div>
-          <div id="navMenu" className="menu nav__menu">
+            </LogoLink>
+          <NavMenu>
             <div>
-              <Link to="/about">
+              <NavLink to="/about">
                 Meist
-              </Link>
-              <Link to="/products">
+              </NavLink>
+              <NavLink to="/products">
                 Tooted
-              </Link>
-              <Link to="/blog">
+              </NavLink>
+              <NavLink to="/blog">
                 Uudised
-              </Link>
-              <Link to="/contact">
+              </NavLink>
+              <NavLink to="/contact">
                 Kontakt
-              </Link>
-              <Link to="/contact/examples">
+              </NavLink>
+              <NavLink to="/contact/examples">
                 Jäta teade
-              </Link>
+              </NavLink>
             </div>
             <div>
               <a
@@ -70,9 +111,9 @@ const Navbar = class extends React.Component {
                 </span>
               </a>
             </div>
-          </div>
-        </nav>
-      </header>
+          </NavMenu>
+        </NavbarGrid>
+      </Header>
     )
   }
 }

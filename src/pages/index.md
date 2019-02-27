@@ -1,32 +1,32 @@
 ---
 templateKey: 'index-page'
-title: 'Some index page title'
-image: /img/home-jumbotron.jpg
-heading: Where is that heading?
-subheading: Some index page subheading
+title: 'Vihur Academy'
+image: /img/ducattired.jpg
+heading: heading
+subheading: vihurmoto.ee
 description: >-
-  This is description
+  description
 mainpitch:
-  title: Vihurmoto
+  title: mainpitch title
   description: >
-      This is some more description.
+      mainpitch descrition
 intro:
   blurbs:
     - image: /img/coffee.png
       text: >
-        Text from intro/blurbs/text
+        Text from intro/blurbs/text1
     - image: /img/coffee-gear.png
       text: >
-        Text from intro/blurbs/text
+        Text from intro/blurbs/text2
     - image: /img/tutorials.png
       text: >
-        Text from intro/blurbs/text
+        Text from intro/blurbs/text3
     - image: /img/meeting-space.png
       text: >
-        Text from intro/blurbs/text
-  heading: Heading
+        Text from intro/blurbs/text4
+  heading: intro heading
   description: >
-    Description from description
+    intro description
 main:
   heading: Main > Heading
   description: >
@@ -41,12 +41,12 @@ main:
     alt: Image 3 alt
     image: /img/products-grid1.jpg
 testimonials:
-  - author: Testimonials Author Name here
+  - author: testimonials author
     quote: >-
-      Quote itself here
-  - author: Another Testimonials Author Name here
+      testimonials quote
+  - author: testimonials author
     quote: >-
-      Another quote iself
+      testimonials quote
 full_image: /img/products-full-width.jpg
 pricing:
   heading: Pricing heading
@@ -60,19 +60,19 @@ pricing:
         - item 3"
       plan: plan
       price: '50'
-    - description: 'Great for avid drinkers, java-loving couples and bigger crowds'
+    - description: 'pricing > plans > description'
       items:
-        - 6 lbs of coffee per month
-        - Green or roasted beans
-        - Up to 4 different varieties of beans
-      plan: Big
-      price: '80'
-    - description: Want a few tiny batches from different varieties? Try our custom plan
+        - item 1
+        - item 2
+        - item 3
+      plan: pricing > plans > plan
+      price: 'price 80'
+    - description: pricing > plans > description
       items:
-        - Whatever you need
-        - Green or roasted beans
-        - Unlimited varieties
-      plan: Custom
-      price: '??'
+        - item 1
+        - item 2
+        - item 3
+      plan: pricing > plans > plan
+      price: 'price 55'
 ---
 

@@ -1,10 +1,21 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
-
 import Layout from '../components/Layout'
 import Features from '../components/Features'
 import BlogRoll from '../components/BlogRoll'
+import styled from 'styled-components';
+
+import { H1, H2 } from '../components/styled/typography'
+import HeroImage from '../components/styled/HeroImage'
+
+const ButtonLink = styled(Link)`
+  color: palevioletred;
+  font-weight: bold;
+  border: solid 10px palegoldenrod;
+  padding: 1rem;
+  border-radius: 50px;
+`;
 
 export const IndexPageTemplate = ({
   image,
@@ -17,95 +28,57 @@ export const IndexPageTemplate = ({
   main,
 }) => (
     <div>
-        <div
-          style={{
-            backgroundImage: `url(${
-              !!image.childImageSharp
-                ? image.childImageSharp.fluid.src
-                : image
-            })`,
-            backgroundPosition: `top left`,
-            backgroundAttachment: `fixed`,
-          }}
-    >
-  <div style={{
-        display: 'flex',
-        height: '150px',
-        lineHeight: '1',
-        justifyContent: 'space-around',
-        alignItems: 'left',
-        flexDirection: 'column' }}>
-      <h1
-        style={{
-          boxShadow: 'rgb(136,0,0) 0.5rem 0px 0px, rgb(136,0,0) -0.5rem 0px 0px',
-          backgroundColor: 'rgb(136,0,0)',
-          color: 'white',
-          lineHeight: '1',
-          padding: '0.25em'
-        }}
-      >
-        {title}
-      </h1>
-      <h3
-        style={{
-          boxShadow: 'rgb(136,0,0) 0.5rem 0px 0px, rgb(136,0,0) -0.5rem 0px 0px',
-          backgroundColor: 'rgb(136,0,0)',
-          color: 'white',
-          lineHeight: '1',
-          padding: '0.25em'
-        }}
-      >
-        {subheading}
-      </h3>
-      </div>
-    </div>
-  <section>
-    <div>
+      <HeroImage backgroundImage={`url(${!!image.childImageSharp ? image.childImageSharp.fluid.src : image})`}>
+        <H1>{ title }</H1>
+        <h3>{ subheading }</h3>
+      </HeroImage>
+      <section>
       <div>
         <div>
           <div>
             <div>
               <div>
                 <div>
-                  <h1>{mainpitch.title}</h1>
-                </div>
-                <div>
-                  <h3>{mainpitch.description}</h3>
-                </div>
-              </div>
-              <div>
-                <div>
-                  <h3>
-                    {heading}
-                  </h3>
-                  <p>{description}</p>
-                </div>
-              </div>
-              <Features gridItems={intro.blurbs} />
-              <div>
-              <div>
-                <Link to="/products">
-                  to="/products"
-                </Link>
-                </div>
-              </div>
-              <div>
-                  <h3>
-                    Loe blogist, mis teoksil <span role="img" aria-label="image">👇</span>
-                  </h3>
-                  <BlogRoll />
                   <div>
-                  <Link to="/blog">
-                    Blogi avalehele
-                  </Link>
+                    <H2>{mainpitch.title}</H2>
                   </div>
-              </div>
-              </div>
+                  <div>
+                    <h3>{mainpitch.description}</h3>
+                  </div>
+                </div>
+                <div>
+                  <div>
+                    <h3>
+                      {heading}
+                    </h3>
+                    <p>{description}</p>
+                  </div>
+                </div>
+                <Features gridItems={intro.blurbs} />
+                <div>
+                <div>
+                  <ButtonLink to="/products">
+                    to="/products"
+                  </ButtonLink>
+                  </div>
+                </div>
+                <div>
+                    <h3>
+                      Loe blogist, mis teoksil <span role="img" aria-label="image">👇</span>
+                    </h3>
+                    <BlogRoll />
+                    <div>
+                    <ButtonLink to="/blog">
+                      Blogi avalehele
+                    </ButtonLink>
+                    </div>
+                </div>
+                </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
   </div>
 )
 

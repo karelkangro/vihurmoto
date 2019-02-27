@@ -6,7 +6,7 @@ const FeatureGrid = ({ gridItems }) => (
   <div>
     {gridItems.map(item => (
       <div key={item.text} >
-        <section>
+        <section className="blog-grid">
           <div>
             <div>
               <PreviewCompatibleImage imageInfo={item} />

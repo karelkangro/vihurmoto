@@ -3,6 +3,17 @@ import { kebabCase } from 'lodash'
 import Helmet from 'react-helmet'
 import { Link, graphql } from 'gatsby'
 import Layout from '../../components/Layout'
+import styled from "styled-components"
+
+const PageTitle = styled.h1`
+  margin: 0 0 12px 0;
+  padding: 0;
+  color: red;
+`
+
+const ListUnordered = styled.li`
+  list-style: none;
+`
 
 const TagsPage = ({
   data: {
@@ -20,8 +31,8 @@ const TagsPage = ({
           <div
             style={{ marginBottom: '6rem' }}
           >
-            <h1>Sildid</h1>
-            <ul>
+            <PageTitle>Sildid</PageTitle>
+            <ListUnordered>
               {group.map(tag => (
                 <li key={tag.fieldValue}>
                   <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
@@ -29,7 +40,7 @@ const TagsPage = ({
                   </Link>
                 </li>
               ))}
-            </ul>
+            </ListUnordered>
           </div>
         </div>
       </div>
