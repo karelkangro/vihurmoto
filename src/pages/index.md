@@ -1,13 +1,13 @@
 ---
 templateKey: 'index-page'
-title: 'Vihur Academy'
+title: '🏍💨 Vihurmoto  '
 image: /img/ducattired.jpg
 heading: heading
-subheading: vihurmoto.ee
+subheading: some
 description: >-
   description
 mainpitch:
-  title: mainpitch title
+  title: mainpitch **title**
   description: >
       mainpitch descrition
 intro:

@@ -3,78 +3,81 @@ import { Link } from 'gatsby'
 import logo from '../img/logo.svg'
 import facebook from '../img/social/facebook.svg'
 import instagram from '../img/social/instagram.svg'
+import { SocialLink } from './styled/links'
+import colors from './styled/colors'
+import styled from 'styled-components'
+
+const StyledFooter = styled.footer`
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  background: ${colors.blue};
+`;
+
+const FooterNav = styled.ul`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+`;
+
+const FooterNavLink = styled(Link)`
+  color: ${colors.white};
+  text-decoration: none;
+  margin-bottom: 1rem;
+  :last-child {
+    margin-bottom: 0;
+  }
+`;
 
 const Footer = class extends React.Component {
   render() {
     return (
-      <footer>
+      <StyledFooter>
         <div>
           <img
             src={logo}
             alt="Vihurmoto"
           />
         </div>
-        <div>
-          <div>
-              <div >
-                <div>
-                <section>
-                    <ul>
-                      <li><Link to="/">Avaleht</Link></li>
-                      <li><Link to="/about">Meist</Link></li>
-                      <li><Link to="/products">
-                        Products
-                      </Link>
-                    </li>
-                    <li>
-                    <Link to="/contact/examples">
-                      Kontakt
-                    </Link>
-                    </li>
-                    <li><a
-                      href="/admin/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Admin
-                    </a></li>
-                    </ul>
-                  </section>
-                </div>
-                <div>
-                <section>
-                  <ul >
-                  <li>
-                    <Link to="/blog">
-                      Viimased postitused
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="/contact">
-                      Kontakt
-                    </Link>
-                  </li>
-                  </ul>
-                </section>
-                </div>
-                <div>
-                  <a title="facebook" href="https://facebook.com">
-                    <img 
-                      src={facebook}
-                      alt="Facebook"
-                    />
-                  </a>
-                  <a title="instagram" href="https://instagram.com">
-                    <img
-                    src={instagram}
-                    alt="Instagram"
-                    />
-                  </a>
-                </div>
-              </div>
-            </div>
+        <FooterNav>
+          <FooterNavLink to="/">Avaleht</FooterNavLink>
+          <FooterNavLink to="/about">Meist</FooterNavLink>
+          <FooterNavLink to="/products">Products</FooterNavLink>
+          <FooterNavLink to="/blog">Viimased postitused</FooterNavLink>
+          <FooterNavLink to="/kontakt/examples">Kontakt examples</FooterNavLink>
+          <FooterNavLink to="/kontakt">Kontakt</FooterNavLink>
+          <a
+            css={`
+              color: ${colors.white};
+              text-decoration: none;
+            `}
+            href="/admin/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Admin
+          </a>
+        </FooterNav>
+        <div
+          css={`
+            display: grid;
+            grid-template-columns: repeat(2, 3rem);
+            align-content: center;
+            justify-content: center;
+          `}
+        >
+          <SocialLink title="facebook" href="https://facebook.com">
+            <img src={facebook} alt="Facebook"/>
+          </SocialLink>
+          <SocialLink title="instagram" href="https://instagram.com">
+            <img src={instagram} alt="Instagram"/>
+          </SocialLink>
         </div>
-      </footer>
+      </StyledFooter>
     )
   }
 }

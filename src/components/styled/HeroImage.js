@@ -7,6 +7,9 @@ const HeroImage = styled.div`
   justify-content: center;
   align-items: center;
   height: 75vh;
+  margin-left: -1rem;
+  margin-right: -1rem;
+  margin-top: -1rem;
   line-height: 1;
   background-image: ${props => props.backgroundImage};
   background-position: center center;

@@ -5,7 +5,7 @@ const NotFoundPage = () => (
   <Layout>
     <div>
       <h1>LEHEKÜLGE EI LEITUD</h1>
-      <p>Siin lingil võiks midagi olla, aga paraku on see täiesti pime kurv hetkel.</p>
+      <p>Pime kurv?</p>
     </div>
   </Layout>
 )

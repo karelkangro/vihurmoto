@@ -4,6 +4,8 @@ import facebook from '../img/social/facebook.svg'
 import logo from '../img/logo.svg'
 import styled from 'styled-components';
 import colors from './styled/colors';
+import { SocialLink } from './styled/links'
+
 import { auto } from 'eol';
 
 const Header = styled.header`
@@ -24,6 +26,7 @@ const NavbarGrid = styled.nav`
 const NavMenu = styled.div`
   display: grid;
   grid-template-columns: 11fr 1fr;
+  align-items: center;
 `;
 
 const LogoLink = styled(Link)`
@@ -35,9 +38,9 @@ const LogoLink = styled(Link)`
   height: auto;
   background: ${colors.blue};
 
-  & img {
-    width: 100px;
-    height: auto;
+  img {
+    width: auto;
+    height: 5.61rem;
   }
 `;
 
@@ -84,32 +87,30 @@ const Navbar = class extends React.Component {
             </LogoLink>
           <NavMenu>
             <div>
-              <NavLink to="/about">
-                Meist
+              <NavLink to="/blog">
+                Uudised
+              </NavLink>
+              <NavLink to="/koolitused">
+                Koolitused
+              </NavLink>
+              <NavLink to="/garaaz">
+                Garaaž
               </NavLink>
               <NavLink to="/products">
                 Tooted
               </NavLink>
-              <NavLink to="/blog">
-                Uudised
-              </NavLink>
-              <NavLink to="/contact">
+              <NavLink to="/kontakt">
                 Kontakt
-              </NavLink>
-              <NavLink to="/contact/examples">
-                Jäta teade
               </NavLink>
             </div>
             <div>
-              <a
+              <SocialLink
                 href="https://www.facebook.com/VihurMoto/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <span>
-                  <img src={facebook} alt="Facebook" />
-                </span>
-              </a>
+                <img src={facebook} alt="Facebook" />
+              </SocialLink>
             </div>
           </NavMenu>
         </NavbarGrid>

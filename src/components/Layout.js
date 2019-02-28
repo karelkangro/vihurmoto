@@ -6,6 +6,13 @@ import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 
 import './all.sass'
+import styled from 'styled-components';
+
+const ContentContainer = styled.div`
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 1rem;
+`;
 
 const TemplateWrapper = ({ children }) => (
   <StaticQuery
@@ -63,7 +70,7 @@ const TemplateWrapper = ({ children }) => (
           <meta property="og:image" content="/img/og-image.jpg" />
         </Helmet>
         <Navbar />
-        <div>{children}</div>
+        <ContentContainer>{children}</ContentContainer>
         <Footer />
       </div>
     )}

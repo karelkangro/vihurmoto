@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql, StaticQuery } from 'gatsby'
-import { H1, H2 } from '../components/styled/typography'
+import { H2 } from '../components/styled/typography'
 class BlogRoll extends React.Component {
 
   render() {

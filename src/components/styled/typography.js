@@ -16,9 +16,6 @@ export const H2 = styled.h1`
   font-size: 1.777rem;
   font-weight: 700;
   padding: 1rem;
-  color: ${colors.white};
-  background: ${colors.black};
-  border-radius: 1rem;
-  border: dashed 1rem ${colors.blue};
+  color: ${colors.blue};
   ${screen.small`font-size: 2.369rem;`}
 `;
