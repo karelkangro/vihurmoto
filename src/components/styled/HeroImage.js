@@ -7,6 +7,7 @@ const HeroImage = styled.div`
   justify-content: center;
   align-items: center;
   height: 75vh;
+  width: 100vw;
   margin-left: -1rem;
   margin-right: -1rem;
   margin-top: -1rem;

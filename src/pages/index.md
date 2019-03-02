@@ -1,28 +1,28 @@
 ---
 templateKey: index-page
-title: "\U0001F3CD\U0001F4A8 Vihurmoto  "
+title: "\U0001F3CD\U0001F4A8 Vihurmoto"
 image: /img/ducattired.jpg
-heading: "\U0001F3CD\U0001F4A8Vihurmoto"
+heading: "some"
 subheading: '2019'
 mainpitch:
   title: Peagi algab motohooaeg!
   description: |
-    Kohtume 8-10. märtsil Tallinn Motor Show'l
-description: description
+    Tule 8-10. märtsil Tallinn Motor Show'le
+description: Tegevused
 intro:
   blurbs:
     - image: /img/coffee.png
       text: |
-        Text from intro/blurbs/text1
+        Koolitus
     - image: /img/coffee-gear.png
       text: |
-        Text from intro/blurbs/text2
+        Treeningud
     - image: /img/tutorials.png
       text: |
-        Text from intro/blurbs/text3
+        Garaaz
     - image: /img/meeting-space.png
       text: |
-        Text from intro/blurbs/text4
+        Võistlused
   heading: intro heading
   description: |
     intro description

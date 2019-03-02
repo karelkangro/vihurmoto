@@ -6,6 +6,7 @@ import Features from '../components/Features'
 import BlogRoll from '../components/BlogRoll'
 import styled from 'styled-components';
 
+import colors from '../components/styled/colors'
 import { H1, H2 } from '../components/styled/typography'
 import HeroImage from '../components/styled/HeroImage'
 
@@ -15,6 +16,16 @@ const ButtonLink = styled(Link)`
   border: solid 10px palegoldenrod;
   padding: 1rem;
   border-radius: 50px;
+`;
+const CTA = styled.section`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2rem;
+  border: dashed 1rem ${colors.red};
+  width: auto;
+  height: 25vh;
+  padding: 1rem;
 `;
 
 export const IndexPageTemplate = ({
@@ -27,59 +38,27 @@ export const IndexPageTemplate = ({
   intro,
   main,
 }) => (
-    <div>
-      <HeroImage backgroundImage={`url(${!!image.childImageSharp ? image.childImageSharp.fluid.src : image})`}>
-        <H1>{ title }</H1>
-        <h3>{ subheading }</h3>
-      </HeroImage>
-      <section>
-      <div>
-        <div>
-          <div>
-            <div>
-              <div>
-                <div>
-                  <div>
-                    <H2>{mainpitch.title}</H2>
-                  </div>
-                  <div>
-                    <h3>{mainpitch.description}</h3>
-                  </div>
-                </div>
-                <div>
-                  <div>
-                    <h3>
-                      {heading}
-                    </h3>
-                    <p>{description}</p>
-                  </div>
-                </div>
-                <Features gridItems={intro.blurbs} />
-                <div>
-                <div>
-                  <ButtonLink to="/products">
-                    to="/products"
-                  </ButtonLink>
-                  </div>
-                </div>
-                <div>
-                    <h3>
-                      Loe blogist, mis teoksil <span role="img" aria-label="image">👇</span>
-                    </h3>
-                    <BlogRoll />
-                    <div>
-                    <ButtonLink to="/blog">
-                      Blogi avalehele
-                    </ButtonLink>
-                    </div>
-                </div>
-                </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </div>
+  <section >
+    <HeroImage 
+      backgroundImage={`url(${!!image.childImageSharp ? image.childImageSharp.fluid.src : image})`}
+    >
+      <H1>{ title }</H1>
+      <h3>{ subheading }</h3>
+    </HeroImage>
+    <H2>{mainpitch.title}</H2>
+    <h3>{mainpitch.description}</h3>           
+    <h3>{heading}</h3>
+    <p>{description}</p>
+    <Features gridItems={intro.blurbs} />
+    <ButtonLink to="/koolitused">Koolitused</ButtonLink>
+    <CTA>
+        <H2>
+          Uudised <span role="img" aria-label="image">👇</span>
+        </H2>
+    </CTA>
+    <BlogRoll />
+    <ButtonLink to="/blog">Blogi lehele</ButtonLink>
+  </section>
 )
 
 IndexPageTemplate.propTypes = {
@@ -123,9 +102,8 @@ IndexPage.propTypes = {
 export default IndexPage
 
 export const pageQuery = graphql`
-query IndexPageTemplate {
-  markdownRemark(frontmatter: {templateKey: {eq: "index-page"}}) {
-      frontmatter {
+query IndexPageTemplate {markdownRemark(frontmatter: {templateKey: {eq: "index-page"}}) {
+  frontmatter {
         title
         image {
           childImageSharp {
@@ -145,7 +123,7 @@ query IndexPageTemplate {
           blurbs {
             image {
               childImageSharp {
-                fluid(maxWidth: 240, quality: 64) {
+                fluid(maxWidth: 300, quality: 72) {
                   ...GatsbyImageSharpFluid
                 }
               }

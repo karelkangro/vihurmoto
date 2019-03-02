@@ -1,5 +1,5 @@
 import React from 'react'
-import Link from 'gatsby-link'
+// import Link from 'gatsby-link'
 import Layout from '../../components/Layout'
 import { H1, H2 } from '../../components/styled/typography'
 import { css } from 'styled-components'

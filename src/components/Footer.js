@@ -9,8 +9,12 @@ import styled from 'styled-components'
 
 const StyledFooter = styled.footer`
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 2rem;
   align-items: center;
+  justify-content: center;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
   background: ${colors.blue};
 `;
 
@@ -37,30 +41,19 @@ const Footer = class extends React.Component {
   render() {
     return (
       <StyledFooter>
-        <div>
+        <div css={`display: flex; justify-content: center;`}>
           <img
             src={logo}
             alt="Vihurmoto"
+            css={`width: 17rem; height: 17rem;`}
           />
         </div>
         <FooterNav>
           <FooterNavLink to="/">Avaleht</FooterNavLink>
-          <FooterNavLink to="/about">Meist</FooterNavLink>
+          <FooterNavLink to="/blog">Uudised</FooterNavLink>
+          <FooterNavLink to="/koolitused">Koolitused</FooterNavLink>
           <FooterNavLink to="/products">Products</FooterNavLink>
-          <FooterNavLink to="/blog">Viimased postitused</FooterNavLink>
-          <FooterNavLink to="/kontakt/examples">Kontakt examples</FooterNavLink>
           <FooterNavLink to="/kontakt">Kontakt</FooterNavLink>
-          <a
-            css={`
-              color: ${colors.white};
-              text-decoration: none;
-            `}
-            href="/admin/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Admin
-          </a>
         </FooterNav>
         <div
           css={`

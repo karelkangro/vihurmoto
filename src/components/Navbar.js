@@ -4,9 +4,8 @@ import facebook from '../img/social/facebook.svg'
 import logo from '../img/logo.svg'
 import styled from 'styled-components';
 import colors from './styled/colors';
+import screen from './styled/screen';
 import { SocialLink } from './styled/links'
-
-import { auto } from 'eol';
 
 const Header = styled.header`
   height: 100px;
@@ -24,9 +23,10 @@ const NavbarGrid = styled.nav`
 `;
 
 const NavMenu = styled.div`
-  display: grid;
   grid-template-columns: 11fr 1fr;
   align-items: center;
+  display: none;
+  ${screen.medium`display: grid`};
 `;
 
 const LogoLink = styled(Link)`

@@ -1,7 +1,37 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql, StaticQuery } from 'gatsby'
-import { H2 } from '../components/styled/typography'
+import screen from '../components/styled/screen';
+import colors from '../components/styled/colors';
+import styled from 'styled-components'
+import { sharedH2Styles } from '../components/styled/typography'
+
+const BlogPostGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  align-items: center;
+  align-items: flex-start;
+  grid-gap: 1rem;
+  ${screen.medium`grid-template-columns: repeat(auto-fill, minmax(576px, 1fr));`};
+`;
+
+const BlogRollLink = styled(Link)`
+  ${sharedH2Styles};
+  padding: 0;
+  line-height: 1.3;
+  text-decoration: none;
+`;
+
+const BlogReadMoreLink = styled(Link)`
+  margin-left: 1rem;
+  color: ${colors.red};
+  font-weight: 700;
+  text-decoration: none;
+  :hover {
+    transform: scale(3);
+  }
+`;
+
 class BlogRoll extends React.Component {
 
   render() {
@@ -9,28 +39,22 @@ class BlogRoll extends React.Component {
     const { edges: posts } = data.allMarkdownRemark
 
     return (
-      <div>
+      <section css={`margin-top: 2rem`}>
+      <BlogPostGrid>
         {posts && (posts
           .map(({ node: post }) => (
-            <div
-              key={post.id}
-            >
-            <article>
-              <H2>
-                <Link to={post.fields.slug}>
-                  {post.frontmatter.title}
-                </Link>
-              </H2>
-              <p>{post.frontmatter.date}</p>
+            <article key={post.id} css={`margin-bottom: 1rem;`}>
+              <BlogRollLink to={post.fields.slug}>{post.frontmatter.title}</BlogRollLink>
+              <p css={`color: ${colors.red}`}>{post.frontmatter.date}</p>
               {post.excerpt}
-              <Link to={post.fields.slug}>
+              <BlogReadMoreLink to={post.fields.slug}>
                 Ava uudis <span role="img" aria-label="emoticon-hand">👆</span>
-              </Link>
-              </article>
-            </div>
+              </BlogReadMoreLink>
+            </article>
           )))
         }
-      </div>
+      </BlogPostGrid>
+      </section>
     );
   }
 }
