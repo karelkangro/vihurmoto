@@ -4,28 +4,65 @@ import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Features from '../components/Features'
 import BlogRoll from '../components/BlogRoll'
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 import colors from '../components/styled/colors'
+import screen from '../components/styled/screen'
 import { H1, H2 } from '../components/styled/typography'
 import HeroImage from '../components/styled/HeroImage'
 
 const ButtonLink = styled(Link)`
-  color: palevioletred;
   font-weight: bold;
-  border: solid 10px palegoldenrod;
   padding: 1rem;
-  border-radius: 50px;
+  border: dashed .5rem ${colors.red};
+  border-radius: 2rem;
+  text-decoration: none;
 `;
-const CTA = styled.section`
+
+const SectionCalendar = styled.section`
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-gap: 1rem;
+  align-items: flex-start;
+  /* ${screen.small`
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  `} */
+  /* grid-auto-rows: 1px; */
+`;
+
+const CalendarCard = styled.div`
   display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  min-height: 25vh;
+  text-align: center;
+  color: ${colors.white};
+  padding-top: 1rem;
+  padding-bottom: 5rem;
+  background-color: ${colors.blue};
+  border-radius: 2rem;
+`;
+
+const CalendarList = styled.ul`
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-radius: 2rem;
-  border: dashed 1rem ${colors.red};
-  width: auto;
-  height: 25vh;
-  padding: 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+`;
+
+const CalendarItem = styled.li`
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  margin-bottom: .75rem;
+`;
+
+const CalendarDate = styled.div`
+  color: ${colors.red};
 `;
 
 export const IndexPageTemplate = ({
@@ -38,27 +75,140 @@ export const IndexPageTemplate = ({
   intro,
   main,
 }) => (
-  <section >
-    <HeroImage 
-      backgroundImage={`url(${!!image.childImageSharp ? image.childImageSharp.fluid.src : image})`}
-    >
-      <H1>{ title }</H1>
-      <h3>{ subheading }</h3>
-    </HeroImage>
-    <H2>{mainpitch.title}</H2>
-    <h3>{mainpitch.description}</h3>           
-    <h3>{heading}</h3>
-    <p>{description}</p>
-    <Features gridItems={intro.blurbs} />
-    <ButtonLink to="/koolitused">Koolitused</ButtonLink>
-    <CTA>
-        <H2>
-          Uudised <span role="img" aria-label="image">👇</span>
-        </H2>
-    </CTA>
-    <BlogRoll />
-    <ButtonLink to="/blog">Blogi lehele</ButtonLink>
-  </section>
+  <div>
+    <section className="no">
+        <HeroImage
+          backgroundImage={`url(${!!image.childImageSharp ? image.childImageSharp.fluid.src : image})`}
+        >
+          <H1>{title}</H1>
+          <h3 css={`display: none;`}>{subheading}</h3>
+      </HeroImage>
+    </section>
+    <section css={`display: flex; flex-direction: column; justify-content: center; align-items: center; padding-bottom: 5rem;`}>
+        <H2 color={colors.blue} css={`text-align: center; box-shadow: 0px 0.75rem 0px 0px ${colors.red};`}>{mainpitch.title}</H2>
+      <p css={`text-align: center; color: ${colors.blue}; max-width: 75vh;`}>{mainpitch.description}</p>
+    </section>
+    <section>
+      <SectionCalendar>
+        <CalendarCard>
+          <H2 css={`box-shadow: 0px 0.1rem 0px 0px ${colors.red};`}>Märts</H2>
+          <CalendarList>
+            <CalendarItem>
+              <CalendarDate>8 - 10</CalendarDate>
+              <div>🤘Vihurmoto Motomessil</div>
+              <div>Eesti Näituste Messikeskus</div>
+            </CalendarItem>
+          </CalendarList>
+          <H2 css={`box-shadow: 0px 0.1rem 0px 0px ${colors.red};`}>Mai</H2>
+          <CalendarList>
+            <CalendarItem>
+              <CalendarDate>18 - 19</CalendarDate>
+              <div>EMV Ringrada (EST/LV/LT)</div>
+              <div>Auto24ring</div>
+            </CalendarItem>
+          </CalendarList>
+        </CalendarCard>
+        <CalendarCard>
+            <H2 css={`box-shadow: 0px 0.1rem 0px 0px ${colors.red};`}>Juuni</H2>
+          <CalendarList>
+              <CalendarItem>
+                <CalendarDate>1 - 2</CalendarDate>
+                <div>EMV Supermoto</div>
+                <div>Lange</div>
+              </CalendarItem>
+              <CalendarItem>
+                <CalendarDate>15</CalendarDate>
+                <div>🤘Vihurmoto TrackDay</div>
+                <div>Aravete (päripäeva)</div>
+              </CalendarItem>
+              <CalendarItem>
+                <CalendarDate>22 - 23</CalendarDate>
+                <div>EMV Supermoto</div>
+                <div>Aravete</div>
+                </CalendarItem>
+              <CalendarItem>
+                <CalendarDate>29 - 30</CalendarDate>
+                <div>EMV Ringrada (Suur Võidusõit) </div>
+                <div>Auto24ring</div>
+              </CalendarItem>
+          </CalendarList>
+        </CalendarCard>
+        <CalendarCard>
+            <H2 css={`box-shadow: 0px 0.1rem 0px 0px ${colors.red};`}>Juuli</H2>
+          <CalendarList>
+              <CalendarItem>
+                <CalendarDate>13 – 14</CalendarDate>
+                <div>EMV Ringrada (FIN/EST/LT/LV) </div>
+                <div>Auto24ring</div>
+              </CalendarItem>
+              <CalendarItem>
+                <CalendarDate>20 - 21</CalendarDate>
+                <div>EMV Supermoto </div>
+                <div>Aravete 🤘Vihur Motosport</div>
+              </CalendarItem>
+              <CalendarItem>
+                <CalendarDate>20</CalendarDate>
+                <div>🤘Vihurmoto TrackDay</div>
+                <div>Aravete (vastupäeva)</div>
+              </CalendarItem>
+              <CalendarItem><CalendarDate>26 - 28</CalendarDate>
+                <div>EMV Ringrada (FIN/EST)</div>
+                <div>Alastaro, Soome</div>
+              </CalendarItem>
+          </CalendarList>
+        </CalendarCard>
+        <CalendarCard>
+            <H2 css={`box-shadow: 0px 0.1rem 0px 0px ${colors.red};`}>August</H2>
+          <CalendarList>
+              <CalendarItem>
+                <CalendarDate>10 - 11</CalendarDate>
+                <div>EMV Supermoto</div>
+                <div>Rapla</div>
+              </CalendarItem>
+              <CalendarItem>
+                <CalendarDate>18</CalendarDate>
+                <div>🤘Vihurmoto TrackDay</div>
+                <div>Rapla kardirada</div>
+              </CalendarItem>
+              <CalendarItem>
+                <CalendarDate>24 - 25</CalendarDate>
+                <div>EMV Ringrada (EST/LV,LT)</div>
+                <div>Bikernieku, Läti</div>
+              </CalendarItem>
+              <CalendarItem>
+                <CalendarDate>28</CalendarDate>
+                <div>EMV Supermoto</div>
+                <div>Tabasalu</div>
+              </CalendarItem>
+          </CalendarList>
+        </CalendarCard>
+        <CalendarCard>
+            <H2 css={`box-shadow: 0px 0.1rem 0px 0px ${colors.red};`}>September</H2>
+          <CalendarList>
+              <CalendarItem>
+                <CalendarDate>7 - 8</CalendarDate>
+                <div>EMV Ringrada (EST/LV/LT)</div>
+                <div>Auto24ring</div>
+              </CalendarItem>
+          </CalendarList>
+        </CalendarCard>
+      </SectionCalendar>
+    </section>
+    {/* <section>
+      <h3>{heading}</h3>
+      <p>{description}</p>
+      <Features gridItems={intro.blurbs} />
+      <H2>
+        <ButtonLink to="/koolitused">Vaata koolitusi</ButtonLink>
+      </H2>
+    </section> */}
+    <section>
+      <BlogRoll />
+      <H2>
+        <ButtonLink to="/blog">Blogi lehele</ButtonLink>
+      </H2>
+    </section>
+  </div>
 )
 
 IndexPageTemplate.propTypes = {

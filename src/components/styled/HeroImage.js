@@ -8,17 +8,14 @@ const HeroImage = styled.div`
   align-items: center;
   height: 75vh;
   width: 100vw;
-  margin-left: -1rem;
-  margin-right: -1rem;
-  margin-top: -1rem;
   line-height: 1;
   background-image: ${props => props.backgroundImage};
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   ${screen.small`
-    height: 60vh;
-    background-position: top left;
+    height: 31.4rem;
+    background-position: left center;
   `}
 `;
 

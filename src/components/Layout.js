@@ -6,12 +6,11 @@ import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 
 import './all.sass'
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 const ContentContainer = styled.div`
-  display: grid;
-  grid-template-columns: 1fr;
-  padding: 1rem;
+  margin: 0;
+  padding: 0;
 `;
 
 const TemplateWrapper = ({ children }) => (

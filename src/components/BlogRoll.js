@@ -20,6 +20,10 @@ const BlogRollLink = styled(Link)`
   padding: 0;
   line-height: 1.3;
   text-decoration: none;
+  color: ${colors.blue};
+  :hover {
+    text-decoration: underline;
+  }
 `;
 
 const BlogReadMoreLink = styled(Link)`
@@ -28,7 +32,7 @@ const BlogReadMoreLink = styled(Link)`
   font-weight: 700;
   text-decoration: none;
   :hover {
-    transform: scale(3);
+    text-decoration: underline;
   }
 `;
 

@@ -18,7 +18,7 @@ export const sharedH2Styles = css`
   font-size: 1.777rem;
   font-weight: 700;
   padding: 1rem;
-  color: ${colors.blue};
+  color: ${props => props.color};
   ${screen.small`font-size: 2.369rem;`};
 `;
 

@@ -3,11 +3,13 @@ templateKey: index-page
 title: "\U0001F3CD\U0001F4A8 Vihurmoto"
 image: /img/ducattired.jpg
 heading: "some"
-subheading: '2019'
+subheading: 'Kevad koputab garaažiuksele!'
 mainpitch:
-  title: Peagi algab motohooaeg!
+  title: Ratas korda!
   description: |
-    Tule 8-10. märtsil Tallinn Motor Show'le
+    Teeme mototehnika hooldust ja remonti.
+    Müüme kvaliteetseid varuosasid ja rehve, jagame kauba peale väärtsulikku knowhow'd.
+    Parimasse seadesse ja hooldatud saavad Vihuri ruumides ka sinu mootrratta amordid.
 description: Tegevused
 intro:
   blurbs:
