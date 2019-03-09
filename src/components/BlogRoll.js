@@ -12,7 +12,7 @@ const BlogPostGrid = styled.div`
   align-items: center;
   align-items: flex-start;
   grid-gap: 1rem;
-  ${screen.medium`grid-template-columns: repeat(auto-fill, minmax(576px, 1fr));`};
+  ${screen.medium`grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));`};
 `;
 
 const BlogRollLink = styled(Link)`

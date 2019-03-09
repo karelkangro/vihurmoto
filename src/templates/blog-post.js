@@ -5,6 +5,12 @@ import Helmet from 'react-helmet'
 import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
+import styled, { css } from 'styled-components';
+
+const BlogContent = styled.section`
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+`;
 
 export const BlogPostTemplate = ({
   content,
@@ -17,8 +23,9 @@ export const BlogPostTemplate = ({
   const PostContent = contentComponent || Content
 
   return (
-    <section >
+    <BlogContent>
       {helmet || ''}
+      <div></div>
       <div>
         <h1>{title}</h1>
         <p>{description}</p>
@@ -36,7 +43,8 @@ export const BlogPostTemplate = ({
           </div>
         ) : null}
       </div>
-    </section>
+      <div></div>
+    </BlogContent>
   )
 }
 

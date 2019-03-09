@@ -4,46 +4,37 @@ path: /koolitus
 title: Koolitused
 ---
 
-# MOTOKOOL / MARKO ROHTLAAN
+# KOOLITUSED
 
-TULE ÕPI SÕITMA PARIMATE JUHENDAMISEL!
+## Tule õpi sõitma parimate juhendamisel!
 
-TUTVU KOOLITUSTEEMADEGA
+### 👇PAKETID
 
-KOOLITUSPAKETT
-
-### NULLIST SÕITMA
+### 🏍🤘NULLIST SÕITMA
 See koolitus sobib neile, kes pole mitte kunagi mootorattaga sõitnud ja tahaks proovida koos kogenud juhendajaga.
 
 Sisaldab mootorratta kasutamist.
 
-Hind: 150 €
-Soovin osaleda
+**Hind: 150 €**<br/>
+<a href="/kontakt">Soovin osaleda</a>
 
 
-KOOLITUSPAKETT
-
-### KORDAME ÜLE
+### 🏍🤘KORDAME ÜLE
 Oled just load saanud või on sul need ammu olemas, aga oled sõitmise unustanud – see koolitus on just sinule.
 
 Võimalus rentida mootorratas koolituse ajaks.
 
-Hind: 120 €
-Soovin osaleda
+**Hind: 120 €**<br/>
+<a href="/kontakt">Soovin osaleda</a>
 
 
-KOOLITUSPAKETT
-
-### PÕLV MAHA
+### 🏍🤘PÕLV MAHA
 Sul on juhiload juba ammu olemas ja ratas, millega sõita, kuid tahaksid oma sõiduoskusi parandada.
 
-Hind: 120 €
-Soovin osaleda
+**Hind: 120 €**<br/>
+<a href="/kontakt">Soovin osaleda</a>
 
-VEEL KOOLITUSI
-
-KÜSI TÄPSEMAT INFOT MEILI TEEL
-
+## 👇Veel koolitusi kokkuleppel
 ### Rollerisõidu koolitus
 Mõeldud noortele, kes soovivad suvel rolleriga sõitma hakata.
 
@@ -52,7 +43,7 @@ Mõeldud neile, kes tahvad oma rajasõidu oskusi täiendada ringrajal või kardi
 
 Õpid trajektoore valima, filmime ja analüüsime sõitu.
 
-### Võidusõidu koolitus 
+### Võidusõidu koolitus
 Sportlastele ja harrastajatele C-klass (Pärnus).
 
 Koolitusel sõidan ees ning vean vaikselt tempot kiiremaks, filmin GoPro-ga.
@@ -67,37 +58,18 @@ Kogud kindlust ja õpid rattavalitsemist libedates sõidutingimustes.
 Õpid tsiklit seadistama enda vajaduste järgi.
 Vaatame, kuidas valida vastavalt asfaldile, rehvisegule, ilmaolule parim seadistus.
 
-KOOLITUSI VIIB LÄBI
+## Instruktor 🧔 MARKO ROHTLAAN
 
-### MARKO ROHTLAAN
+Motokogemus 25 aastat. 🏍🤘
 
-Motokogemus 25 aastat. Olen õppinud mitmete maailmameistrite juures (Stephane Mertens, Terry Rymer, Oscar Rumi)
+Olen õppinud mitmete maailmameistrite juures (Stephane Mertens, Terry Rymer, Oscar Rumi)
 ning võistelnud tipptiimides (Phase One Endrance, Diablo 666 Endurance, Azione Corse).
 Koolitamise kogemus aastast 2004. Olen 12 aastat erinevaid koolitusi läbi viinud.
 Nõustan enamust Eesti tippringrajasõitjaist ning ka algajaid (C-klass).
 
-# ALUSTAME KOHE KUI ASFALT KUIV!
+# ☀️ ALUSTAME KOHE KUI ASFALT KUIV! ☀️
 
 Oled valmis natuke rohkem tskilisõidust teada saama?
 Tunned end mõnes sõiduolukorras ebakindlalt?
 Tahad endast ja oma rattast parima välja pigistada?
-
-
-# PREEMIUM KOOLITUSED
-
-Oleme kogenud professionaalid
-
-PERSONAALNE LÄHENEMINE
-
-Koolitusel max 2 inimest korraga
-
-### MEIEGA VÕIDAD
-
-Koolitus on kindel võit
-
-KOOLITUSED TOIMUVAD ÜLE EESTI TSIKLITEGA BMW JA KTM
-
-SAA ESIMESENA TEADA JÄRGMISTEST KOOLITUSTEST
-
-###### JÄTA MEILE OMA KONTAKTID
-###### OLE VÄRSKE KOOLITUSINFOGA KURSIS
+<a href="/kontakt"><h2>🤘Soovin osaleda</h2></a>

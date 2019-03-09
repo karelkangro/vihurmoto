@@ -9,8 +9,8 @@ export const H1 = styled.h1`
   text-align: center;
   color: ${colors.white};
   background: ${colors.blue};
-  border-radius: .75rem;
-  ${screen.small`font-size: 2.639rem; padding: 1.333rem; text-align: left;`}
+  border-radius: 2.369rem;
+  ${screen.small`font-size: 2.639rem; padding: 2.369rem; text-align: left;`}
   ${screen.medium`font-size: 3.157rem`}
 `;
 

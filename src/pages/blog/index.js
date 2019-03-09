@@ -11,7 +11,7 @@ export default class BlogIndexPage extends React.Component {
   return (
       <Layout>
         <section>
-          <HeroImage 
+          <HeroImage
             backgroundImage={`url('https://res.cloudinary.com/spiralcloud/image/upload/w_1500,h_800,c_crop/vihurmoto-blog-hero.jpg')`}
           >
           <H1>

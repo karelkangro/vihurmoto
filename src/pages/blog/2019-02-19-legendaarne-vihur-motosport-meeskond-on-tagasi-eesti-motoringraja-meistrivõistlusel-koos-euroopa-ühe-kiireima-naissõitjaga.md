@@ -5,9 +5,7 @@ title: >-
   meistrivõistlusel koos Euroopa ühe kiireima naissõitjaga
 date: 2016-06-03T09:20:00.000Z
 description: >-
-  <h1>Legendaarne Vihur Motosport meeskond on tagasi Eesti motoringraja
-  meistrivõistlusel koos Euroopa ühe kiireima naissõitjaga</h1>Sellel
-  nädalavahetusel stardib auto24ringil Eneos Eesti ja Balti meistrivõistluste
+  Sellel nädalavahetusel stardib auto24ringil Eneos Eesti ja Balti meistrivõistluste
   sari motoringrajasõidus. Alates sellest aastast saab motoringraja võistlustel
   näha ja kuulda taas omal ajal Eestile hulga kuulsust toonud nime Vihur, kui 27
   aastase pausi järel stardib meistrivõistlustel Vihur Motosport nimeline
@@ -18,21 +16,13 @@ description: >-
 tags:
   - pressiteade
 ---
-<strong>Vihur Motosport pressiteade</strong>
+### Vihur Motosport pressiteade
 
 3. juuni 2016
-
-<h1>Legendaarne Vihur Motosport meeskond on tagasi Eesti motoringraja meistrivõistlusel koos Euroopa ühe kiireima naissõitjaga</h1>
-
-Sellel nädalavahetusel stardib auto24ringil Eneos Eesti ja Balti meistrivõistluste sari motoringrajasõidus. Alates sellest aastast saab motoringraja võistlustel näha ja kuulda taas omal ajal Eestile hulga kuulsust toonud nime Vihur, kui 27 aastase pausi järel stardib meistrivõistlustel Vihur Motosport nimeline meeskond. Selle eesotsas on Eesti parimate motoringrajasõitjate hulka kuuluv Marko Rohtlaan, kes peale aktiivse sportlaskarjääri lõppu on endiselt armastatud alaga seotud. Meeskonda juhib ta koos Jüri Randla juunioriga, kes on ka tiimi üks sõitjatest.
-
-
 
 IMAGE 
 
 http://vihurmoto.ee/wp-content/uploads/2016/06/Kolkanen_Rohtlaan_Randla.jpg
-
-
 
 „Eelmise aasta lõpul olime koos Jüri Randla juunioriga koos ja vaatasime, et mis olukorras Eesti motoringrada on. Kuna suuremas osas on see harrastajatel püsiv, siis leidsime, et tuleks hakata treenima noori motoringrajasõitjaid, kes tulevikus võiks jõuda Euroopa ja maailma tippu. Meie alal on varakult alustamine kindlasti eelis. Vihur Motosport nime kasutamise osas rääkisime mitmete kuulsate sõitjatega, kes sellega seotud on olnud: Jüri Raudsik, Lembit Teesalu ja paljud teised. Lisaks oli Jüri Randla juunior vanaisa omaaegse Vihuri eestvedaja ja tagasiside oli positiivne. Samuti teeb treeningutel osalevate noorte arv rõõmu, hetkel käib meil auto24ringil treeningutel kokku 32 noort,“ räägib Vihur Motosport meeskonna taassünnist Marko Rohtlaan.
 

@@ -2,8 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
-import Features from '../components/Features'
-import BlogRoll from '../components/BlogRoll'
+// import Features from '../components/Features'
+// import BlogRoll from '../components/BlogRoll'
 import styled, { css } from 'styled-components';
 
 import colors from '../components/styled/colors'
@@ -13,15 +13,21 @@ import HeroImage from '../components/styled/HeroImage'
 
 const ButtonLink = styled(Link)`
   font-weight: bold;
-  padding: 1rem;
-  border: dashed .5rem ${colors.red};
+  padding: 2rem;
   border-radius: 2rem;
+  color: ${colors.blue};
   text-decoration: none;
+  text-align: center;
+  box-shadow: 0 .7rem 1rem 0 ${colors.blueShadow};
+  :hover {
+    transition: all .22s ease-out;
+    box-shadow: 0 1rem 2rem 0 ${colors.blueShadow};
+  }
 `;
 
 const SectionCalendar = styled.section`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   grid-gap: 1rem;
   align-items: flex-start;
   /* ${screen.small`
@@ -35,13 +41,12 @@ const CalendarCard = styled.div`
   flex-direction: column;
   justify-content: start;
   align-items: center;
-  min-height: 25vh;
+  height: 100%;
   text-align: center;
   color: ${colors.white};
-  padding-top: 1rem;
-  padding-bottom: 5rem;
   background-color: ${colors.blue};
   border-radius: 2rem;
+  box-shadow: 0 .7rem 1rem 0 ${colors.blueShadow};
 `;
 
 const CalendarList = styled.ul`
@@ -59,10 +64,14 @@ const CalendarItem = styled.li`
   padding: 0;
   text-align: center;
   margin-bottom: .75rem;
+  :last-child {
+    margin-bottom: 2rem;
+  }
 `;
 
 const CalendarDate = styled.div`
-  color: ${colors.red};
+  color: ${colors.redLight};
+  font-size: 1.333rem;
 `;
 
 export const IndexPageTemplate = ({
@@ -86,23 +95,29 @@ export const IndexPageTemplate = ({
     </section>
     <section css={`display: flex; flex-direction: column; justify-content: center; align-items: center; padding-bottom: 5rem;`}>
         <H2 color={colors.blue} css={`text-align: center; box-shadow: 0px 0.75rem 0px 0px ${colors.red};`}>{mainpitch.title}</H2>
-      <p css={`text-align: center; color: ${colors.blue}; max-width: 75vh;`}>{mainpitch.description}</p>
+        <p css={`text-align: center; color: ${colors.blue}; max-width: 75vh; margin-bottom: 3rem;`}>{mainpitch.description}</p>
+        <h3>
+          <ButtonLink
+            to="/kontakt"
+            color={colors.blue}
+          > <span role="img" aria-label="hand">👉</span> Võta ühendust</ButtonLink>
+        </h3>
     </section>
-    <section>
+    <section css={`padding-bottom: 1rem;`}>
       <SectionCalendar>
         <CalendarCard>
           <H2 css={`box-shadow: 0px 0.1rem 0px 0px ${colors.red};`}>Märts</H2>
           <CalendarList>
             <CalendarItem>
-              <CalendarDate>8 - 10</CalendarDate>
-              <div>🤘Vihurmoto Motomessil</div>
+              <CalendarDate>8/10</CalendarDate>
+              <div><span role="img" aria-label="hand">🤘</span>Vihurmoto Motomessil</div>
               <div>Eesti Näituste Messikeskus</div>
             </CalendarItem>
           </CalendarList>
           <H2 css={`box-shadow: 0px 0.1rem 0px 0px ${colors.red};`}>Mai</H2>
           <CalendarList>
             <CalendarItem>
-              <CalendarDate>18 - 19</CalendarDate>
+              <CalendarDate>18/19</CalendarDate>
               <div>EMV Ringrada (EST/LV/LT)</div>
               <div>Auto24ring</div>
             </CalendarItem>
@@ -112,22 +127,22 @@ export const IndexPageTemplate = ({
             <H2 css={`box-shadow: 0px 0.1rem 0px 0px ${colors.red};`}>Juuni</H2>
           <CalendarList>
               <CalendarItem>
-                <CalendarDate>1 - 2</CalendarDate>
+                <CalendarDate>1/2</CalendarDate>
                 <div>EMV Supermoto</div>
                 <div>Lange</div>
               </CalendarItem>
               <CalendarItem>
                 <CalendarDate>15</CalendarDate>
-                <div>🤘Vihurmoto TrackDay</div>
+                <div><span role="img" aria-label="hand">🤘</span>Vihurmoto TrackDay</div>
                 <div>Aravete (päripäeva)</div>
               </CalendarItem>
               <CalendarItem>
-                <CalendarDate>22 - 23</CalendarDate>
+                <CalendarDate>22/23</CalendarDate>
                 <div>EMV Supermoto</div>
                 <div>Aravete</div>
                 </CalendarItem>
               <CalendarItem>
-                <CalendarDate>29 - 30</CalendarDate>
+                <CalendarDate>29/30</CalendarDate>
                 <div>EMV Ringrada (Suur Võidusõit) </div>
                 <div>Auto24ring</div>
               </CalendarItem>
@@ -137,21 +152,21 @@ export const IndexPageTemplate = ({
             <H2 css={`box-shadow: 0px 0.1rem 0px 0px ${colors.red};`}>Juuli</H2>
           <CalendarList>
               <CalendarItem>
-                <CalendarDate>13 – 14</CalendarDate>
+                <CalendarDate>13/14</CalendarDate>
                 <div>EMV Ringrada (FIN/EST/LT/LV) </div>
                 <div>Auto24ring</div>
               </CalendarItem>
               <CalendarItem>
-                <CalendarDate>20 - 21</CalendarDate>
-                <div>EMV Supermoto </div>
-                <div>Aravete 🤘Vihur Motosport</div>
-              </CalendarItem>
-              <CalendarItem>
                 <CalendarDate>20</CalendarDate>
-                <div>🤘Vihurmoto TrackDay</div>
+                <div><span role="img" aria-label="hand">🤘</span>Vihurmoto TrackDay</div>
                 <div>Aravete (vastupäeva)</div>
               </CalendarItem>
-              <CalendarItem><CalendarDate>26 - 28</CalendarDate>
+              <CalendarItem>
+                <CalendarDate>20/21</CalendarDate>
+                <div>EMV Supermoto </div>
+                <div>Aravete <span role="img" aria-label="hand">🤘</span></div>
+              </CalendarItem>
+              <CalendarItem><CalendarDate>26/28</CalendarDate>
                 <div>EMV Ringrada (FIN/EST)</div>
                 <div>Alastaro, Soome</div>
               </CalendarItem>
@@ -161,17 +176,17 @@ export const IndexPageTemplate = ({
             <H2 css={`box-shadow: 0px 0.1rem 0px 0px ${colors.red};`}>August</H2>
           <CalendarList>
               <CalendarItem>
-                <CalendarDate>10 - 11</CalendarDate>
+                <CalendarDate>10/11</CalendarDate>
                 <div>EMV Supermoto</div>
                 <div>Rapla</div>
               </CalendarItem>
               <CalendarItem>
                 <CalendarDate>18</CalendarDate>
-                <div>🤘Vihurmoto TrackDay</div>
+                <div><span role="img" aria-label="hand">🤘</span>Vihurmoto TrackDay</div>
                 <div>Rapla kardirada</div>
               </CalendarItem>
               <CalendarItem>
-                <CalendarDate>24 - 25</CalendarDate>
+                <CalendarDate>24/25</CalendarDate>
                 <div>EMV Ringrada (EST/LV,LT)</div>
                 <div>Bikernieku, Läti</div>
               </CalendarItem>
@@ -186,7 +201,7 @@ export const IndexPageTemplate = ({
             <H2 css={`box-shadow: 0px 0.1rem 0px 0px ${colors.red};`}>September</H2>
           <CalendarList>
               <CalendarItem>
-                <CalendarDate>7 - 8</CalendarDate>
+                <CalendarDate>7/8</CalendarDate>
                 <div>EMV Ringrada (EST/LV/LT)</div>
                 <div>Auto24ring</div>
               </CalendarItem>
@@ -202,12 +217,18 @@ export const IndexPageTemplate = ({
         <ButtonLink to="/koolitused">Vaata koolitusi</ButtonLink>
       </H2>
     </section> */}
-    <section>
+      {/* <section css={`display: flex; flex-direction: column; justify-content: center; align-items: center; padding-bottom: 5rem;`}>
+        <H2 color={colors.blue} css={`text-align: center; box-shadow: 0px 0.75rem 0px 0px ${colors.red};`}>Uudised</H2>
       <BlogRoll />
       <H2>
-        <ButtonLink to="/blog">Blogi lehele</ButtonLink>
+          <ButtonLink
+            to="/blog"
+            color={colors.blue}
+          >
+            <span role="img" aria-label="hand">👉</span> Blogisse
+          </ButtonLink>
       </H2>
-    </section>
+    </section> */}
   </div>
 )
 

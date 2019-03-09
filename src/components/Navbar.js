@@ -23,10 +23,15 @@ const NavbarGrid = styled.nav`
 `;
 
 const NavMenu = styled.div`
-  grid-template-columns: 11fr 1fr;
+  display: grid;
+  grid-template-columns: 1fr;
   align-items: center;
+  ${screen.medium`grid-template-columns: 11fr 1fr;`};
+`;
+
+const SocialControl = styled.div`
   display: none;
-  ${screen.medium`display: grid`};
+  ${screen.medium`display: block;`};
 `;
 
 const LogoLink = styled(Link)`
@@ -34,7 +39,8 @@ const LogoLink = styled(Link)`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 200px;
+  width: 100px;
+  ${screen.medium`width: 200px`};
   height: auto;
   background: ${colors.blue};
 
@@ -87,23 +93,23 @@ const Navbar = class extends React.Component {
             </LogoLink>
           <NavMenu>
             <div>
-              <NavLink to="/blog">
+              {/* <NavLink to="/blog">
                 Uudised
-              </NavLink>
+              </NavLink> */}
               <NavLink to="/koolitused">
                 Koolitused
               </NavLink>
-              <NavLink to="/garaaz">
+              {/* <NavLink to="/garaaz">
                 Garaaž
-              </NavLink>
-              <NavLink to="/products">
+              </NavLink> */}
+              {/* <NavLink to="/products">
                 Tooted
-              </NavLink>
+              </NavLink> */}
               <NavLink to="/kontakt">
                 Kontakt
               </NavLink>
             </div>
-            <div>
+            <SocialControl>
               <SocialLink
                 href="https://www.facebook.com/VihurMoto/"
                 target="_blank"
@@ -111,7 +117,7 @@ const Navbar = class extends React.Component {
               >
                 <img src={facebook} alt="Facebook" />
               </SocialLink>
-            </div>
+            </SocialControl>
           </NavMenu>
         </NavbarGrid>
       </Header>
