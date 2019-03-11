@@ -5,7 +5,6 @@ import Layout from '../components/Layout'
 // import Features from '../components/Features'
 // import BlogRoll from '../components/BlogRoll'
 import styled, { css } from 'styled-components';
-
 import colors from '../components/styled/colors'
 import screen from '../components/styled/screen'
 import { H1, H2 } from '../components/styled/typography'
@@ -86,7 +85,6 @@ export const IndexPageTemplate = ({
 }) => (
   <div>
     <HeroBackground
-      className="no-padding"
       backgroundImage={`url(${!!image.childImageSharp ? image.childImageSharp.fluid.src : image})`}
     >
       <div css={`
