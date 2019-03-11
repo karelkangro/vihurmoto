@@ -87,7 +87,7 @@ export const IndexPageTemplate = ({
   <div>
     <HeroBackground
       className="no-padding"
-      backgroundImage={`url(${!!image.childImageSharp ? image.childImageSharp.fluid.src : image})`}
+        backgroundImage={`url('/img/ducatired.jpg')`}
     >
       <div css={`
         height: 100%;
