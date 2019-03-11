@@ -10,7 +10,11 @@ export const H1 = styled.h1`
   color: ${colors.white};
   background: ${colors.blue};
   border-radius: 2.369rem;
-  ${screen.small`font-size: 2.639rem; padding: 2.369rem; text-align: left;`}
+  ${screen.small`
+    font-size: 2.639rem;
+    padding: 2.369rem;
+    text-align: left;
+  `}
   ${screen.medium`font-size: 3.157rem`}
 `;
 
@@ -23,6 +27,4 @@ export const sharedH2Styles = css`
 `;
 
 
-export const H2 = styled.h2`
-  ${sharedH2Styles}
-`;
+export const H2 = styled.h2`${sharedH2Styles}`;

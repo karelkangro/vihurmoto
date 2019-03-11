@@ -13,34 +13,13 @@ const Header = styled.header`
   /* box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); */
 `;
 
-const NavbarGrid = styled.nav`
-  display: grid;
-  grid-template-columns: 2fr 10fr;
-  align-items: center;
-  grid-column-gap: 2rem;
-  height: 100%;
-  color: ${colors.white};
-`;
-
-const NavMenu = styled.div`
-  display: grid;
-  grid-template-columns: 1fr;
-  align-items: center;
-  ${screen.medium`grid-template-columns: 11fr 1fr;`};
-`;
-
-const SocialControl = styled.div`
-  display: none;
-  ${screen.medium`display: block;`};
-`;
-
 const LogoLink = styled(Link)`
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100px;
-  ${screen.medium`width: 200px`};
+  ${screen.medium`width: 200px;`}
   height: auto;
   background: ${colors.blue};
 
@@ -48,6 +27,67 @@ const LogoLink = styled(Link)`
     width: auto;
     height: 5.61rem;
   }
+
+  .is-active & {
+    display: none;
+  }
+`;
+
+const NavbarGrid = styled.nav`
+  display: grid;
+  grid-template-columns: 1fr;
+  ${screen.medium`grid-template-columns: 2fr 10fr;`}
+  grid-column-gap: 2rem;
+  color: ${colors.white};
+    .is-active {
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      background: ${colors.blue};
+      align-items: center;
+    }
+`;
+
+const NavMenu = styled.div`
+  transform: translateX(-100vw) translateY(-100vh);
+  .is-active & {
+    transform: translateX(0) translateY(0);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  ${screen.medium`
+    transform: translateX(0) translateY(0);
+    display: grid;
+    grid-template-columns: 11fr 1fr;
+    justify-content: center;
+    align-items: center;
+  `}
+`;
+
+const NavLinkWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  ${screen.medium`
+    flex-direction: row;
+    justify-content: start;
+  `}
+`;
+
+const SocialControl = styled.div`
+  margin-top: 1rem;
+  ${screen.medium`
+    display: block;
+    margin-top: 0;
+  `}
 `;
 
 const NavLink = styled(Link)`
@@ -60,55 +100,87 @@ const NavLink = styled(Link)`
   background: ${colors.blue};
 `;
 
-const Navbar = class extends React.Component {
-  componentDidMount() {
-    // Get all "navbar-burger" elements
-    const $navbarBurgers = Array.prototype.slice.call(
-      document.querySelectorAll('.navbar-burger'),
-      0
-    )
-    // Check if there are any navbar burgers
-    if ($navbarBurgers.length > 0) {
-      // Add a click event on each of them
-      $navbarBurgers.forEach(el => {
-        el.addEventListener('click', () => {
-          // Get the target from the "data-target" attribute
-          const target = el.dataset.target
-          const $target = document.getElementById(target)
+const NavBurger = styled.div`
+  position: fixed;
+  bottom: 1rem;
+  right: .75rem;
+  background-color: ${colors.red};
+  border-radius: 50%;
+  width: 3.157rem;
+  height: 3.157rem;
+  color: ${colors.white};
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
 
-          // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-          el.classList.toggle('is-active')
-          $target.classList.toggle('is-active')
-        })
-      })
-    }
+  &:after,
+  &:before,
+  div {
+    background-color: ${colors.white};
+    border-radius: 3px;
+    content: '';
+    display: block;
+    height: 3px;
+    width: 1.77rem;
+    margin: 3px auto;
+    transition: all .2s ease-in-out;
   }
+
+  ${screen.medium`display: none;`}
+`;
+
+const Navbar = class extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      active: false,
+      navBarActiveClass: ""
+    };
+  }
+
+  toggleHamburger = () => {
+    // toggle the active boolean in the state
+    this.setState(
+      {
+        active: !this.state.active
+      },
+      // after state has been updated,
+      () => {
+        // set the class in state for the navbar accordingly
+        this.state.active
+          ? this.setState({
+            navBarActiveClass: "is-active"
+          })
+          : this.setState({
+            navBarActiveClass: ""
+          });
+      }
+    );
+  };
 
   render() {
     return (
-      <Header>
-        <NavbarGrid>
-            <LogoLink to="/" title="Logo">
-              <img src={logo} alt="Vihurmoto"/>
-            </LogoLink>
-          <NavMenu>
-            <div>
-              {/* <NavLink to="/blog">
-                Uudised
-              </NavLink> */}
-              <NavLink to="/koolitused">
+      <Header
+        role="navigation"
+        aria-label="main-navigation"
+      >
+        <NavbarGrid className={`${this.state.navBarActiveClass}`}>
+          <LogoLink to="/" title="Logo">
+            <img src={logo} alt="Vihurmoto"/>
+          </LogoLink>
+          <NavMenu
+            id="navMenu"
+            className={`${this.state.navBarActiveClass}`}
+          >
+            <NavLinkWrapper>
+              <NavLink className="navbar-item" to="/koolitused">
                 Koolitused
               </NavLink>
-              {/* <NavLink to="/garaaz">
-                Garaaž
-              </NavLink> */}
-              {/* <NavLink to="/products">
-                Tooted
-              </NavLink> */}
-              <NavLink to="/kontakt">
+              <NavLink className="navbar-item" to="/kontakt">
                 Kontakt
               </NavLink>
-            </div>
+            </NavLinkWrapper>
             <SocialControl>
               <SocialLink
                 href="https://www.facebook.com/VihurMoto/"
@@ -120,9 +192,15 @@ const Navbar = class extends React.Component {
             </SocialControl>
           </NavMenu>
         </NavbarGrid>
+        <NavBurger
+          className={`${this.state.navBarActiveClass}`}
+          onClick={() => this.toggleHamburger()}
+        >
+          <div className="middle"></div>
+        </NavBurger>
       </Header>
-    )
+    );
   }
-}
+};
 
 export default Navbar

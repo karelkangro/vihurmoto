@@ -1,14 +1,10 @@
 import styled from 'styled-components';
 import screen from './screen';
 
-const HeroImage = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+const HeroBackground = styled.section`
   height: 75vh;
   width: 100vw;
-  line-height: 1;
+  padding: 0;
   background-image: ${props => props.backgroundImage};
   background-position: center center;
   background-repeat: no-repeat;
@@ -19,4 +15,4 @@ const HeroImage = styled.div`
   `}
 `;
 
-export default HeroImage;
+export default HeroBackground;

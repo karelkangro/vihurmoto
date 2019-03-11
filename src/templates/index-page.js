@@ -9,7 +9,7 @@ import styled, { css } from 'styled-components';
 import colors from '../components/styled/colors'
 import screen from '../components/styled/screen'
 import { H1, H2 } from '../components/styled/typography'
-import HeroImage from '../components/styled/HeroImage'
+import HeroBackground from '../components/styled/HeroBackground'
 
 const ButtonLink = styled(Link)`
   font-weight: bold;
@@ -85,14 +85,21 @@ export const IndexPageTemplate = ({
   main,
 }) => (
   <div>
-    <section className="no">
-        <HeroImage
-          backgroundImage={`url(${!!image.childImageSharp ? image.childImageSharp.fluid.src : image})`}
-        >
-          <H1>{title}</H1>
-          <h3 css={`display: none;`}>{subheading}</h3>
-      </HeroImage>
-    </section>
+    <HeroBackground
+      className="no-padding"
+      backgroundImage={`url(${!!image.childImageSharp ? image.childImageSharp.fluid.src : image})`}
+    >
+      <div css={`
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      `}>
+        <H1>{title}</H1>
+        <h3 css={`display: none;`}>{subheading}</h3>
+      </div>
+    </HeroBackground>
     <section css={`display: flex; flex-direction: column; justify-content: center; align-items: center; padding-bottom: 5rem;`}>
         <H2 color={colors.blue} css={`text-align: center; box-shadow: 0px 0.75rem 0px 0px ${colors.red};`}>{mainpitch.title}</H2>
         <p css={`text-align: center; color: ${colors.blue}; max-width: 75vh; margin-bottom: 3rem;`}>{mainpitch.description}</p>

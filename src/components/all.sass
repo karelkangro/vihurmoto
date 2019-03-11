@@ -33,5 +33,21 @@ body
 section
   padding-left: .5rem
   padding-right: .5rem
-  &.no
-    padding: 0
+
+.no-padding
+  padding: 0
+
+.is-active .middle
+  display: none
+
+.is-active
+  &:before
+    transform: rotate(45deg)
+    margin: 0
+    position: absolute
+    right: 11px
+  &:after
+    transform: rotate(-45deg)
+    margin: 0
+    position: absolute
+    left: 11px
