@@ -1,15 +1,19 @@
 ---
 templateKey: index-page
 title: "\U0001F3CD\U0001F4A8 Vihurmoto"
-image: /img/ducatired.jpg 
-heading: "some"
-subheading: 'Kevad koputab garaažiuksele!'
+image: /img/mess.jpg
+heading: some
+subheading: Kevad koputab garaažiuksele!
 mainpitch:
   title: Ratas korda!
-  description: |
+  description: >
     Teeme mototehnika hooldust ja remonti.
-    Müüme kvaliteetseid varuosasid ja rehve, jagame kauba peale väärtsulikku knowhow'd.
-    Parimasse seadesse ja hooldatud saavad Vihuri ruumides ka sinu mootrratta amordid.
+
+    Müüme kvaliteetseid varuosasid ja rehve, jagame kauba peale väärtsulikku
+    knowhow'd.
+
+    Parimasse seadesse ja hooldatud saavad Vihuri ruumides ka sinu mootrratta
+    amordid.
 description: Tegevused
 intro:
   blurbs:
