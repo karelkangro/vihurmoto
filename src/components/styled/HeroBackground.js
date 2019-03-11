@@ -9,6 +9,7 @@ const HeroBackground = styled.section`
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  background-size: cover;
   ${screen.small`
     height: 31.4rem;
     background-position: left center;

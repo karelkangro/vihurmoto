@@ -1,7 +1,7 @@
 ---
 templateKey: index-page
 title: "\U0001F3CD\U0001F4A8 Vihurmoto"
-image: /img/mess.jpg
+image: /img/ducatired.jpg
 heading: some
 subheading: Kevad koputab garaažiuksele!
 mainpitch:
