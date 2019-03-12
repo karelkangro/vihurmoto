@@ -99,7 +99,7 @@ export const IndexPageTemplate = ({
       </div>
     </HeroBackground>
     <section css={`display: flex; flex-direction: column; justify-content: center; align-items: center; padding-bottom: 5rem;`}>
-        <H2 color={colors.blue} css={`text-align: center; box-shadow: 0px 0.75rem 0px 0px ${colors.red};`}>{mainpitch.title}</H2>
+        <H2 color={colors.blue} boxShadow={colors.red} css={`text-align: center;`}>{mainpitch.title}</H2>
         <p css={`text-align: center; color: ${colors.blue}; max-width: 75vh; margin-bottom: 3rem;`}>{mainpitch.description}</p>
         <h3>
           <ButtonLink

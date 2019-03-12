@@ -12,7 +12,7 @@ export const H1 = styled.h1`
   border-radius: 2.369rem;
   ${screen.small`
     font-size: 2.639rem;
-    padding: 2.369rem;
+    padding: 1.333rem;
     text-align: left;
   `}
   ${screen.medium`font-size: 3.157rem`}
@@ -24,6 +24,7 @@ export const sharedH2Styles = css`
   padding: 1rem;
   color: ${props => props.color};
   ${screen.small`font-size: 2.369rem;`};
+  box-shadow: 0px 0.75rem 0px 0px ${props => props.boxShadow};
 `;
 
 

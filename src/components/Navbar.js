@@ -8,10 +8,13 @@ import screen from './styled/screen';
 import { SocialLink } from './styled/links'
 
 const Header = styled.header`
-  height: 6rem;
+  height: 5.61rem;
   background: ${colors.blue};
   width: 100%;
-  ${screen.medium`height: 100%;`}
+  ${screen.medium`
+    height: 100%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;`}
 `;
 
 const LogoLink = styled(Link)`
@@ -19,8 +22,12 @@ const LogoLink = styled(Link)`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100px;
-  ${screen.medium`width: 200px;`}
+  width: 6rem;
+  margin-left: auto;
+  margin-right: auto;
+  ${screen.medium`
+    width: 12rem;
+  `}
   height: auto;
   background: ${colors.blue};
 
@@ -93,7 +100,8 @@ const SocialControl = styled.div`
 const NavLink = styled(Link)`
   font-size: 1.333rem;
   padding: .5rem;
-  margin-right: .75rem;
+  margin-right: 0;
+  ${screen.medium`margin-right: 1.333rem;`}
   text-transform: uppercase;
   text-decoration: none;
   color: ${colors.white};
@@ -160,6 +168,9 @@ const Navbar = class extends React.Component {
             className={`${this.state.navBarActiveClass}`}
           >
             <NavLinkWrapper>
+              <NavLink className="navbar-item" to="/">
+                Avaleht
+              </NavLink>
               <NavLink className="navbar-item" to="/koolitused">
                 Koolitused
               </NavLink>
