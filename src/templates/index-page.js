@@ -108,14 +108,14 @@ export const IndexPageTemplate = ({
           > <span role="img" aria-label="hand">👉</span> Võta ühendust</ButtonLink>
         </h3>
     </section>
-    <section css={`padding-bottom: 1rem;`}>
+    <section css={`padding-bottom: 4rem;`}>
       <SectionCalendar>
         <CalendarCard>
           <H2 css={`box-shadow: 0px 0.1rem 0px 0px ${colors.red};`}>Märts</H2>
           <CalendarList>
             <CalendarItem>
               <CalendarDate>8/10</CalendarDate>
-              <div><span role="img" aria-label="hand">🤘</span>Vihurmoto Motomessil</div>
+              <div>Vihurmoto Motomessil</div>
               <div>Eesti Näituste Messikeskus</div>
             </CalendarItem>
           </CalendarList>
@@ -138,7 +138,7 @@ export const IndexPageTemplate = ({
               </CalendarItem>
               <CalendarItem>
                 <CalendarDate>15</CalendarDate>
-                <div><span role="img" aria-label="hand">🤘</span>Vihurmoto TrackDay</div>
+                <div>Vihurmoto TrackDay</div>
                 <div>Aravete (päripäeva)</div>
               </CalendarItem>
               <CalendarItem>
@@ -163,13 +163,13 @@ export const IndexPageTemplate = ({
               </CalendarItem>
               <CalendarItem>
                 <CalendarDate>20</CalendarDate>
-                <div><span role="img" aria-label="hand">🤘</span>Vihurmoto TrackDay</div>
+                <div>Vihurmoto TrackDay</div>
                 <div>Aravete (vastupäeva)</div>
               </CalendarItem>
               <CalendarItem>
                 <CalendarDate>20/21</CalendarDate>
                 <div>EMV Supermoto </div>
-                <div>Aravete <span role="img" aria-label="hand">🤘</span></div>
+                <div>Aravete </div>
               </CalendarItem>
               <CalendarItem><CalendarDate>26/28</CalendarDate>
                 <div>EMV Ringrada (FIN/EST)</div>
@@ -187,7 +187,7 @@ export const IndexPageTemplate = ({
               </CalendarItem>
               <CalendarItem>
                 <CalendarDate>18</CalendarDate>
-                <div><span role="img" aria-label="hand">🤘</span>Vihurmoto TrackDay</div>
+                <div>Vihurmoto TrackDay</div>
                 <div>Rapla kardirada</div>
               </CalendarItem>
               <CalendarItem>

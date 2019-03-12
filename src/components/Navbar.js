@@ -8,9 +8,10 @@ import screen from './styled/screen';
 import { SocialLink } from './styled/links'
 
 const Header = styled.header`
-  height: 100px;
+  height: 6rem;
   background: ${colors.blue};
-  /* box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); */
+  width: 100%;
+  ${screen.medium`height: 100%;`}
 `;
 
 const LogoLink = styled(Link)`
@@ -37,7 +38,6 @@ const NavbarGrid = styled.nav`
   display: grid;
   grid-template-columns: 1fr;
   ${screen.medium`grid-template-columns: 2fr 10fr;`}
-  grid-column-gap: 2rem;
   color: ${colors.white};
     .is-active {
       display: block;
@@ -91,43 +91,29 @@ const SocialControl = styled.div`
 `;
 
 const NavLink = styled(Link)`
-  font-size: 1rem;
+  font-size: 1.333rem;
   padding: .5rem;
-  margin-right: .5rem;
+  margin-right: .75rem;
   text-transform: uppercase;
   text-decoration: none;
   color: ${colors.white};
   background: ${colors.blue};
 `;
 
-const NavBurger = styled.div`
+const NavBurger = styled.button`
   position: fixed;
   bottom: 1rem;
   right: .75rem;
   background-color: ${colors.red};
   border-radius: 50%;
-  width: 3.157rem;
-  height: 3.157rem;
+  width: 3.4rem;
+  height: 3.4rem;
   color: ${colors.white};
-  display: flex;
-  flex-direction: column;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  /* display: flex;
+  flex-direction: column; */
   justify-content: center;
   cursor: pointer;
-
-  &:after,
-  &:before,
-  div {
-    background-color: ${colors.white};
-    border-radius: 3px;
-    content: '';
-    display: block;
-    height: 3px;
-    width: 1.77rem;
-    margin: 3px auto;
-    transition: all .2s ease-in-out;
-  }
-
-  ${screen.medium`display: none;`}
 `;
 
 const Navbar = class extends React.Component {
@@ -193,10 +179,13 @@ const Navbar = class extends React.Component {
           </NavMenu>
         </NavbarGrid>
         <NavBurger
-          className={`${this.state.navBarActiveClass}`}
+          className={`hamburger hamburger--vortex ${this.state.navBarActiveClass}`}
+          type="button"
           onClick={() => this.toggleHamburger()}
         >
-          <div className="middle"></div>
+          <span className="hamburger-box">
+            <span className="hamburger-inner"></span>
+          </span>
         </NavBurger>
       </Header>
     );

@@ -1,4 +1,5 @@
 @import "~normalize.css"
+@import "hamburgers.sass"
 
 // Config variables
 $blue: #0a2463 // rgb(10,36,99)
@@ -7,18 +8,18 @@ $black: #1A1918 // rgb(26,25,24)
 $black-leather: #2C302E // rgb(44,48,46)
 $dark-red: #880000 // rgb(136,0,0)
 $font-family-sans-serif: "Open Sans", -apple-system,system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif
-$font-size-lg: 1.333rem
-$font-size-sm: 1rem
-$font-size-xs: 0.75rem
-$font-weight-normal: 400
-$font-weight-bold: 700
-$line-height-base: 1.5
-$h1-font-size: 3.157rem
-$h2-font-size: 2.369rem
-$h3-font-size: 1.777rem
-$h4-font-size: 1.333rem
-$h5-font-size: 1rem
-$h6-font-size: 1rem
+// $font-size-lg: 1.333rem
+// $font-size-sm: 1rem
+// $font-size-xs: 0.75rem
+// $font-weight-normal: 400
+// $font-weight-bold: 700
+// $line-height-base: 1.5
+// $h1-font-size: 3.157rem
+// $h2-font-size: 2.369rem
+// $h3-font-size: 1.777rem
+// $h4-font-size: 1.333rem
+// $h5-font-size: 1rem
+// $h6-font-size: 1rem
 
 //globals
 body
@@ -36,18 +37,3 @@ section
 
 .no-padding
   padding: 0
-
-.is-active .middle
-  display: none
-
-.is-active
-  &:before
-    transform: rotate(45deg)
-    margin: 0
-    position: absolute
-    right: 11px
-  &:after
-    transform: rotate(-45deg)
-    margin: 0
-    position: absolute
-    left: 11px
