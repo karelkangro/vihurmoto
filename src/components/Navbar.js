@@ -23,8 +23,6 @@ const LogoLink = styled(Link)`
   justify-content: center;
   align-items: center;
   width: 6rem;
-  margin-left: auto;
-  margin-right: auto;
   ${screen.medium`
     width: 12rem;
   `}

@@ -23,8 +23,11 @@ export const sharedH2Styles = css`
   font-weight: 700;
   padding: 1rem;
   color: ${props => props.color};
-  ${screen.small`font-size: 2.369rem;`};
-  box-shadow: 0px 0.75rem 0px 0px ${props => props.boxShadow};
+  box-shadow: 0px 0.333rem 0px 0px ${props => props.boxShadow};
+  ${screen.small`
+    font-size: 2.369rem;
+    box-shadow: 0px 0.75rem 0px 0px ${props => props.boxShadow};
+  `};
 `;
 
 

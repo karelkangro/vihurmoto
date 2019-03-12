@@ -17,6 +17,7 @@ export default class Index extends React.Component {
             align-items: center;
             text-align: center;
             padding-bottom: 4rem;
+            padding-top: 1rem;
           `}
         >
           <H1>Kontakt 📬</H1>
