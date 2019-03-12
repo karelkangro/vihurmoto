@@ -16,6 +16,8 @@ tags:
 ---
 Kõige väiksemate hulgas, 50cc klassis sõitis Vihur Motosport ridades 4 sõitjat kõigil Eesti Jääraja Kunn etappidel. Neile lisaks Oskar Kärg, kes osales ühel etapil. Väga hea hooaja tegi 5-aastane Theo Kolts, kes jättis selja taha mitmed vanemad sõitjad. Ta suutis olla mitmes sõidus kiireim ja ühe etapi võita, mis kokkuvõttes andis teise koha. Travis Siilak oli seitsmes, Caspar Vetkin kaheksas ja Meribel Kask oli 12. kohal. 
 
+![jäärada](/img/vihur_jaarada_4.jpg "Jäärada")
+
 65cc klassis olid mitmed sõitjad liikunud edasi suuremasse klassi. Eesti karikavõistlustel saavutas Frankie Lvovs kuuenda ja Mathias Vetkin, kes pidi haiguse tõttu ühe etapi vahele jätma, sai seitsmenda koha. Eesti Jääraja Kunn karikasarjas tegid aga samad poised väga hea hooaja. Mathias Vetkin tuli sarja võitjaks, edestades tiimikaaslast Frankie Lvovsi. 
 
 Nagu siis öeldud, olid paljud sõitjad liikunud 85cc klassi ja tulemused olid ka siin korralikud. Karl Takk, kes sellel suvel hakkab sõitma Supersport 300 klassis, tuli Eesti karikavõitjaks. Hugo -Brent Freimann oli viimasel etapil teine aga väikesed eksimused teistel etappidel ei lubanud kokkuvõttes kõrgemat kohta kui neljas. Silvester Sarapik oli üheksas ja Karro Robert Jäärats 11. Eesti Jääraja Kunn sarja võitja oli samuti Karl Takk, Hugo-Brent Freimann oli selles sarjas kolmas. Karro Robert Jäärats oli seitsmes ja Silvester Sarapik 11. 
@@ -34,13 +36,9 @@ Facebook https://www.facebook.com/VihurMoto/
 
 Instagra, https://www.instagram.com/vihurmoto/
 
-
-
 Manuses olevate fotode autor: Rauno Kais
 
 Lisainfo: Marko Rohtlaan, Vihur Motosport meeskonna juht. Mobiil: +372 551 4404, e-mail: marko@vihurmoto.ee
-
-
 
 Tervitades,
 
