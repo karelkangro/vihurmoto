@@ -1,7 +1,10 @@
 import styled from 'styled-components';
 import screen from './screen';
 
-const HeroBackground = styled.section`
+const SectionWithBackground = styled.section`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 75vh;
   width: 100vw;
   padding: 0;
@@ -16,4 +19,4 @@ const HeroBackground = styled.section`
   `}
 `;
 
-export default HeroBackground;
+export default SectionWithBackground;

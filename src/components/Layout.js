@@ -6,6 +6,7 @@ import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 
 import './all.sass'
+// eslint-disable-next-line
 import styled, { css } from 'styled-components';
 
 const ContentContainer = styled.div`

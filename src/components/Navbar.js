@@ -66,6 +66,7 @@ const NavMenu = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    z-index: 1;
   }
   ${screen.medium`
     transform: translateX(0) translateY(0);
@@ -96,10 +97,10 @@ const SocialControl = styled.div`
 `;
 
 const NavLink = styled(Link)`
-  font-size: 1.333rem;
+  font-size: 1rem;
   padding: .5rem;
   margin-right: 0;
-  ${screen.medium`margin-right: 1.333rem;`}
+  ${screen.medium`margin-right: 1rem;`}
   text-transform: uppercase;
   text-decoration: none;
   color: ${colors.white};
@@ -120,6 +121,7 @@ const NavBurger = styled.button`
   flex-direction: column; */
   justify-content: center;
   cursor: pointer;
+  z-index: 2;
 `;
 
 const Navbar = class extends React.Component {
@@ -167,13 +169,16 @@ const Navbar = class extends React.Component {
           >
             <NavLinkWrapper>
               <NavLink className="navbar-item" to="/">
-                Avaleht
+                AVALEHT
+              </NavLink>
+              <NavLink className="navbar-item" to="/blog">
+                UUDISED
               </NavLink>
               <NavLink className="navbar-item" to="/koolitused">
-                Koolitused
+                KOOLITUSED
               </NavLink>
               <NavLink className="navbar-item" to="/kontakt">
-                Kontakt
+                KONTAKT
               </NavLink>
             </NavLinkWrapper>
             <SocialControl>

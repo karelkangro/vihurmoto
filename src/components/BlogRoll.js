@@ -43,12 +43,21 @@ class BlogRoll extends React.Component {
     const { edges: posts } = data.allMarkdownRemark
 
     return (
-      <section css={`margin-top: 2rem`}>
+      <section css={`
+        margin-top: 2rem;
+        margin-bottom: 4rem;
+        padding-left: 0;
+        padding-right: 0;
+        ${screen.medium`
+          padding-left: 2rem;
+          padding-right: 2rem;
+        `}
+      `}>
       <BlogPostGrid>
         {posts && (posts
           .map(({ node: post }) => (
             <article key={post.id} css={`margin-bottom: 1rem;`}>
-              <BlogRollLink to={post.fields.slug}>{post.frontmatter.title}</BlogRollLink>
+              <BlogRollLink border={colors.transparent} to={post.fields.slug}>{post.frontmatter.title}</BlogRollLink>
               <p css={`color: ${colors.red}`}>{post.frontmatter.date}</p>
               {post.excerpt}
               <BlogReadMoreLink to={post.fields.slug}>

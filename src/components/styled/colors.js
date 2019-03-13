@@ -6,6 +6,7 @@ const colors = {
   blueShadow: "rgba(10,36,99,.4)",
   red: "rgb(222,26,26)",
   redLight: "rgb(228,46,46)",
+  transparent: "rgba(0,0,0,0)"
 };
 
 export default colors;

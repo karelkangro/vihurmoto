@@ -2,18 +2,17 @@ import styled, { css } from 'styled-components';
 import colors from './colors';
 import screen from './screen';
 
-export const H1 = styled.h1`
+export const sharedH1Styles = css`
   font-size: 1.777rem;
   font-weight: 700;
   padding: 1rem;
   text-align: center;
-  color: ${colors.white};
-  background: ${colors.blue};
   border-radius: 2.369rem;
+  color: ${colors.white};
   ${screen.small`
     font-size: 2.639rem;
-    padding: 1.333rem;
     text-align: left;
+    padding: 1.333rem;
   `}
   ${screen.medium`font-size: 3.157rem`}
 `;
@@ -23,12 +22,29 @@ export const sharedH2Styles = css`
   font-weight: 700;
   padding: 1rem;
   color: ${props => props.color};
-  box-shadow: 0px 0.333rem 0px 0px ${props => props.boxShadow};
   ${screen.small`
     font-size: 2.369rem;
-    box-shadow: 0px 0.75rem 0px 0px ${props => props.boxShadow};
   `};
 `;
 
+export const sharedBorderStyles = css`
+  box-shadow: ${props => props.borderheight} ${props => props.border};
+  ${screen.small`
+    box-shadow: ${props => props.borderheight} ${props => props.border};
+  `};
+`;
 
-export const H2 = styled.h2`${sharedH2Styles}`;
+export const H1 = styled.h1`${sharedH1Styles}`;
+
+export const H1WidthBackground = styled.h1`
+  ${sharedH1Styles}
+  background: ${colors.blue};
+`
+
+export const H2WidthBoxShadow = styled.h2`
+  ${sharedH2Styles}
+  ${sharedBorderStyles}
+`
+export const H2 = styled.h2`
+  ${sharedH2Styles}
+`

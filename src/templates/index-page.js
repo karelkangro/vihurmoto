@@ -1,14 +1,22 @@
+// libraries
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
+// eslint-disable-next-line
+import styled, { css } from 'styled-components';
+
+// components
 import Layout from '../components/Layout'
 // import Features from '../components/Features'
-// import BlogRoll from '../components/BlogRoll'
-import styled, { css } from 'styled-components';
-import colors from '../components/styled/colors'
+import BlogRoll from '../components/BlogRoll'
+
+// style utils
 import screen from '../components/styled/screen'
-import { H1, H2 } from '../components/styled/typography'
-import HeroBackground from '../components/styled/HeroBackground'
+import colors from '../components/styled/colors'
+
+// styled components
+import { H1WidthBackground, H2WidthBoxShadow, H2 } from '../components/styled/typography'
+import SectionWithBackground from '../components/styled/SectionWithBackground'
 
 const ButtonLink = styled(Link)`
   font-weight: bold;
@@ -84,7 +92,7 @@ export const IndexPageTemplate = ({
   main,
 }) => (
   <div>
-    <HeroBackground
+    <SectionWithBackground
       backgroundImage={`url(${!!image.childImageSharp ? image.childImageSharp.fluid.src : image})`}
     >
       <div css={`
@@ -94,12 +102,12 @@ export const IndexPageTemplate = ({
         justify-content: center;
         align-items: center;
       `}>
-        <H1>{title}</H1>
+        <H1WidthBackground>{title}</H1WidthBackground>
         <h3 css={`display: none;`}>{subheading}</h3>
       </div>
-    </HeroBackground>
+    </SectionWithBackground>
     <section css={`display: flex; flex-direction: column; justify-content: center; align-items: center; padding-bottom: 5rem;`}>
-        <H2 color={colors.blue} boxShadow={colors.red} css={`text-align: center;`}>{mainpitch.title}</H2>
+        <H2WidthBoxShadow color={colors.blue} borderheight={`0px 0.333rem 0px 0px`} border={colors.red} css={`text-align: center;`}>{mainpitch.title}</H2WidthBoxShadow>
         <p css={`text-align: center; color: ${colors.blue}; max-width: 75vh; margin-bottom: 3rem;`}>{mainpitch.description}</p>
         <h3>
           <ButtonLink
@@ -111,7 +119,7 @@ export const IndexPageTemplate = ({
     <section css={`padding-bottom: 4rem;`}>
       <SectionCalendar>
         <CalendarCard>
-          <H2 css={`box-shadow: 0px 0.1rem 0px 0px ${colors.red};`}>Märts</H2>
+          <H2WidthBoxShadow css={`box-shadow: 0px 0.1rem 0px 0px ${colors.red};`}>Märts</H2WidthBoxShadow>
           <CalendarList>
             <CalendarItem>
               <CalendarDate>8/10</CalendarDate>
@@ -119,7 +127,7 @@ export const IndexPageTemplate = ({
               <div>Eesti Näituste Messikeskus</div>
             </CalendarItem>
           </CalendarList>
-          <H2 css={`box-shadow: 0px 0.1rem 0px 0px ${colors.red};`}>Mai</H2>
+          <H2WidthBoxShadow css={`box-shadow: 0px 0.1rem 0px 0px ${colors.red};`}>Mai</H2WidthBoxShadow>
           <CalendarList>
             <CalendarItem>
               <CalendarDate>18/19</CalendarDate>
@@ -129,7 +137,7 @@ export const IndexPageTemplate = ({
           </CalendarList>
         </CalendarCard>
         <CalendarCard>
-            <H2 css={`box-shadow: 0px 0.1rem 0px 0px ${colors.red};`}>Juuni</H2>
+            <H2WidthBoxShadow css={`box-shadow: 0px 0.1rem 0px 0px ${colors.red};`}>Juuni</H2WidthBoxShadow>
           <CalendarList>
               <CalendarItem>
                 <CalendarDate>1/2</CalendarDate>
@@ -154,7 +162,7 @@ export const IndexPageTemplate = ({
           </CalendarList>
         </CalendarCard>
         <CalendarCard>
-            <H2 css={`box-shadow: 0px 0.1rem 0px 0px ${colors.red};`}>Juuli</H2>
+            <H2WidthBoxShadow css={`box-shadow: 0px 0.1rem 0px 0px ${colors.red};`}>Juuli</H2WidthBoxShadow>
           <CalendarList>
               <CalendarItem>
                 <CalendarDate>13/14</CalendarDate>
@@ -178,7 +186,7 @@ export const IndexPageTemplate = ({
           </CalendarList>
         </CalendarCard>
         <CalendarCard>
-            <H2 css={`box-shadow: 0px 0.1rem 0px 0px ${colors.red};`}>August</H2>
+            <H2WidthBoxShadow css={`box-shadow: 0px 0.1rem 0px 0px ${colors.red};`}>August</H2WidthBoxShadow>
           <CalendarList>
               <CalendarItem>
                 <CalendarDate>10/11</CalendarDate>
@@ -203,7 +211,7 @@ export const IndexPageTemplate = ({
           </CalendarList>
         </CalendarCard>
         <CalendarCard>
-            <H2 css={`box-shadow: 0px 0.1rem 0px 0px ${colors.red};`}>September</H2>
+            <H2WidthBoxShadow css={`box-shadow: 0px 0.1rem 0px 0px ${colors.red};`}>September</H2WidthBoxShadow>
           <CalendarList>
               <CalendarItem>
                 <CalendarDate>7/8</CalendarDate>
@@ -222,8 +230,12 @@ export const IndexPageTemplate = ({
         <ButtonLink to="/koolitused">Vaata koolitusi</ButtonLink>
       </H2>
     </section> */}
-      {/* <section css={`display: flex; flex-direction: column; justify-content: center; align-items: center; padding-bottom: 5rem;`}>
-        <H2 color={colors.blue} css={`text-align: center; box-shadow: 0px 0.75rem 0px 0px ${colors.red};`}>Uudised</H2>
+      <section css={`display: flex; flex-direction: column; justify-content: center; align-items: center; padding-bottom: 5rem;`}>
+        <H2WidthBoxShadow
+          color={colors.blue}
+          borderheight={`0px 0.333rem 0px 0px`}
+          border={colors.red}
+          css={`text-align: center;`}>Uudised</H2WidthBoxShadow>
       <BlogRoll />
       <H2>
           <ButtonLink
@@ -233,7 +245,7 @@ export const IndexPageTemplate = ({
             <span role="img" aria-label="hand">👉</span> Blogisse
           </ButtonLink>
       </H2>
-    </section> */}
+    </section>
   </div>
 )
 

@@ -1,7 +1,8 @@
 import React from 'react'
 // import Link from 'gatsby-link'
 import Layout from '../../components/Layout'
-import { H1, H2 } from '../../components/styled/typography'
+import { H1WidthBackground, H2WidthBoxShadow } from '../../components/styled/typography'
+// eslint-disable-next-line
 import { css } from 'styled-components'
 import colors from '../../components/styled/colors';
 
@@ -20,9 +21,9 @@ export default class Index extends React.Component {
             padding-top: 1rem;
           `}
         >
-          <H1>Kontakt 📬</H1>
+          <H1WidthBackground>Kontakt</H1WidthBackground>
           <p>Asume kaasaegsel Auto 24 Ring ringrajal Pärnu külje all Audrus.</p>
-          <H2 color={colors.blue} boxShadow={colors.red}>Vihurmoto Motorsport MTÜ</H2>
+          <H2WidthBoxShadow color={colors.blue} borderheight={`0px 0.333rem 0px 0px`} border={colors.red}>Vihurmoto Motorsport MTÜ</H2WidthBoxShadow>
             <div
               css={`
                 max-width: 22rem;
@@ -42,7 +43,7 @@ export default class Index extends React.Component {
                   Tel: 5514404
                 </a>| E-mail: motosport@vihurmoto.ee</p>
             </div>
-          <H2 color={colors.blue} boxShadow={colors.red}>Vihurmoto OÜ</H2>
+          <H2WidthBoxShadow color={colors.blue} borderheight={`0px 0.333rem 0px 0px`} border={colors.red}>Vihurmoto OÜ</H2WidthBoxShadow>
             <div
               css={`
                 max-width: 22rem;
