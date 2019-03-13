@@ -12,7 +12,7 @@ description: >
   radadel kihutamas 24. Tulemused olid eeskujulikud ja kiired rajad pakkusid hea
   võimaluse ka talvel tsikli seljas trenni teha.
 tags:
-  - vihurmoto jäärada
+  - jäärada
 ---
 Kõige väiksemate hulgas, 50cc klassis sõitis **Vihur Motosport** ridades 4 sõitjat kõigil Eesti Jääraja Kunn etappidel. Neile lisaks **Oskar Kärg**, kes osales ühel etapil. Väga hea hooaja tegi 5-aastane **Theo Kolts**, kes jättis selja taha mitmed vanemad sõitjad. Ta suutis olla mitmes sõidus kiireim ja ühe etapi võita, mis kokkuvõttes andis teise koha. **Travis Siilak** oli seitsmes, **Caspar Vetkin** kaheksas ja **Meribel Kask** oli 12. kohal. 
 
