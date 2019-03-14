@@ -9,10 +9,12 @@ import Content, { HTMLContent } from '../components/Content'
 import styled, { css } from 'styled-components';
 // style utils
 import colors from '../components/styled/colors'
+import screen from '../components/styled/screen'
 
 const BlogContent = styled.section`
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-columns: 1fr;
+  ${screen.medium`grid-template-columns: 1fr 2fr 1fr;`}
   padding-top: 1rem;
   padding-bottom: 4rem;
 `;

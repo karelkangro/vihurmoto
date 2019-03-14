@@ -46,8 +46,8 @@ class BlogRoll extends React.Component {
       <section css={`
         margin-top: 2rem;
         margin-bottom: 4rem;
-        padding-left: 0;
-        padding-right: 0;
+        padding-left: 1rem;
+        padding-right: 1rem;
         ${screen.medium`
           padding-left: 2rem;
           padding-right: 2rem;
