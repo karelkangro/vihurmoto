@@ -117,16 +117,11 @@ export const IndexPageTemplate = ({
         </h3>
     </section>
     <section css={`padding-bottom: 4rem;`}>
+      <div css={`display: flex; justify-content: center; margin-bottom: 2rem;`}>
+        <H2WidthBoxShadow color={colors.blue} borderheight={`0px 0.333rem 0px 0px`} border={colors.blue} css={`text-align: center;`}>Kalender</H2WidthBoxShadow>
+      </div>
       <SectionCalendar>
         <CalendarCard>
-          <H2WidthBoxShadow css={`box-shadow: 0px 0.1rem 0px 0px ${colors.red};`}>Märts</H2WidthBoxShadow>
-          <CalendarList>
-            <CalendarItem>
-              <CalendarDate>8/10</CalendarDate>
-              <div>Vihurmoto Motomessil</div>
-              <div>Eesti Näituste Messikeskus</div>
-            </CalendarItem>
-          </CalendarList>
           <H2WidthBoxShadow css={`box-shadow: 0px 0.1rem 0px 0px ${colors.red};`}>Mai</H2WidthBoxShadow>
           <CalendarList>
             <CalendarItem>

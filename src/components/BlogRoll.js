@@ -54,7 +54,7 @@ class BlogRoll extends React.Component {
         `}
       `}>
       <BlogPostGrid>
-        {posts && (posts
+          {posts && (posts.slice(0, 3)
           .map(({ node: post }) => (
             <article key={post.id} css={`margin-bottom: 1rem;`}>
               <BlogRollLink border={colors.transparent} to={post.fields.slug}>{post.frontmatter.title}</BlogRollLink>
