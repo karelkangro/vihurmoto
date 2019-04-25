@@ -71,7 +71,7 @@ export default class Index extends React.Component {
                 Tel: 5514404
               </a>| E-mail: motosport@vihurmoto.ee
             </p>
-            <p>Registri number:<br/> 12948879</p>
+            <p>Registri number:<br /> 12948879</p>
             <a
               href="https://goo.gl/maps/fmwDWKi54Gv"
               target="_blank"
@@ -97,9 +97,9 @@ export default class Index extends React.Component {
                 css={`text-decoration: none; color: inherit;`}
               >
                 Tel: 5514404
-                </a>| E-mail: info@vihurmoto.ee</p>
-              <p>Registri number:<br/> 12948879</p>
-              <p>Juriidiline aadress: <br/>Sakala tn 12-11, Tallinn, 10141</p>
+              </a>| E-mail: info@vihurmoto.ee</p>
+            <p>Registri number:<br /> 12948879</p>
+            <p>Juriidiline aadress: <br />Sakala tn 12-11, Tallinn, 10141</p>
           </div>
         </section>
         <section css={`
@@ -118,6 +118,15 @@ export default class Index extends React.Component {
             data-netlify="true"
             data-netlify-honeypot="bot-field"
             onSubmit={this.handleSubmit}
+            css={`
+              display: flex;
+              justify-content: center;
+              flex-direction: column;
+              align-items: center;
+              padding-top: 2rem;
+              padding-bottom: 2rem;
+              min-width: 280px;
+            `}
           >
             {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
             <input type="hidden" name="form-name" value="contact" />
@@ -127,52 +136,48 @@ export default class Index extends React.Component {
                 <input name="bot-field" onChange={this.handleChange} />
               </label>
             </div>
-            <div>
-              <label htmlFor={'name'}>
-                Sinu nimi
-                  </label>
-              <div>
-                <input
-                  type={'text'}
-                  name={'name'}
-                  onChange={this.handleChange}
-                  id={'name'}
-                  required={true}
-                />
-              </div>
-            </div>
-            <div>
-              <label htmlFor={'email'}>
-                E-mail
-                  </label>
-              <div>
-                <input
-                  type={'email'}
-                  name={'email'}
-                  onChange={this.handleChange}
-                  id={'email'}
-                  required={true}
-                />
-              </div>
-            </div>
-            <div>
-              <label htmlFor={'message'}>
-                Sõnum
-                  </label>
-              <div cl>
-                <textarea
-                  name={'message'}
-                  onChange={this.handleChange}
-                  id={'message'}
-                  required={true}
-                />
-              </div>
-            </div>
-            <div>
-              <button type="submit">
-                Saada
-                  </button>
-            </div>
+            <label htmlFor={'name'}>
+              Sinu nimi
+            </label>
+            <input
+              type={'text'}
+              name={'name'}
+              onChange={this.handleChange}
+              id={'name'}
+              required={true}
+            />
+            <label htmlFor={'email'}>
+              E-mail
+            </label>
+            <input
+              type={'email'}
+              name={'email'}
+              onChange={this.handleChange}
+              id={'email'}
+              required={true}
+            />
+            <label htmlFor={'phone'}>
+              Telefon
+            </label>
+            <input
+              type={'phone'}
+              name={'phone'}
+              onChange={this.handleChange}
+              id={'phone'}
+              required={true}
+            />
+            <label htmlFor={'message'}>
+              Sõnum
+            </label>
+            <textarea
+              name={'message'}
+              onChange={this.handleChange}
+              id={'message'}
+              required={true}
+            />
+            <button type="submit">
+              Saada
+            </button>
           </form>
         </section>
       </Layout>
