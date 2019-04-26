@@ -5,8 +5,8 @@ export default () => (
   <Layout>
     <section>
       <div>
-        <h1>Suur tänu!</h1>
-        <p>Vormitäis infot sai kenasti saadetud.</p>
+        <h1>Täname, et tundsid huvi ja jätsid oma kontaktid!</h1>
+        <p>Võtame esimesel võimalusel ühendust.</p>
       </div>
     </section>
   </Layout>

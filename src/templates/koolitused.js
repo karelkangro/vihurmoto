@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { useState } from 'react'
 import PropTypes from 'prop-types'
-import { Link, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
 // components
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
@@ -21,7 +21,27 @@ const Grid = styled.section`
   ${screen.medium`grid-template-columns: 768px;`};
 `;
 
-const ButtonLink = styled(Link)`
+const StyledForm = styled.form`
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 280px;
+  max-width: 100%;
+  height: 400px;
+  max-height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1rem;
+  background: white;
+  border-radius: 2rem;
+  z-index: 10;
+  box-shadow: 0 3rem 5rem 0 ${colors.blueShadow};
+  ${screen.medium``};
+`;
+
+const ButtonContact = styled.button`
   display: block;
   font-weight: bold;
   padding: 1.5rem;
@@ -36,105 +56,172 @@ const ButtonLink = styled(Link)`
   }
 `;
 
-export const KoolitusedTemplate = (
-  {
-    title,
-    content,
-    description,
-    contentComponent
-  }
-) => {
+const ButtonClose = styled.button`
+  position: absolute;
+  right: .5rem;
+  top: 1rem;
+  border: none;
+  background: none;
+`
+
+export const KoolitusedTemplate = ({ title, content, description, contentComponent }) => {
+  const [formIsVisible, showForm] = useState(false);
+  let [subject, handleSubject ] = useState('Täpsusta teema')
+  const formInlineStyles = {
+    transform: formIsVisible ? 'translate(-50%, -50%)' : 'translate(-200%, -200%)'
+  };
   const PageContent = contentComponent || Content
   const imageFirstPackage = '/img/school-first-package.jpg'
   const imageSecondPackage = '/img/school-second-package.jpg'
   const imageThirdPackage = '/img/school-third-package.jpg'
   const imageMasterClass = '/img/vihurmoto-2019-auto24ring.jpg'
   const imageMarko = '/img/marko-rohtlaan-instruktor.jpg'
+
   return (
     <div>
-    <SectionWithBackground
-      backgroundImage={`url(${imageMasterClass})`}
-    >
-      <div css={`
-        height: 100%;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      `}>
-        <H1WidthBackground>{title}</H1WidthBackground>
-        <h3 css={`display: none;`}>{description}</h3>
-      </div>
-    </SectionWithBackground>
-    <Grid>
-      <section className="courses">
-          <div className="courses__list">
-            <div className="course-item course-item--first">
-            <img className="course-item__image" src={imageMarko} alt="motokoolitus" />
-            <H2 color={colors.blue}>Instruktor Marko Rohtlaan</H2>
-            <p>Motokogemus 25 aastat. Olen õppinud mitmete maailmameistrite juures (Stephane Mertens, Terry Rymer, Oscar Rumi) ning võistelnud tipptiimides (Phase One Endrance, Diablo 666 Endurance, Azione Corse). Koolitamise kogemus aastast 2004. Olen 15 aastat erinevaid koolitusi läbi viinud. Nõustan enamust Eesti tippringrajasõitjaist ning ka algajaid (C-klass).</p>
-              <p>Oled valmis natuke rohkem tskilisõidust teada saama? Tunned end mõnes sõiduolukorras ebakindlalt? Tahad endast ja oma rattast parima välja pigistada?</p>
-              <p>Tutvu allolevate koolitustega võta ühendust!</p>
-            </div>
-          <div className="course-item">
-            <img className="course-item__image" src={imageFirstPackage} alt="motokoolitus"/>
-            <div className="course-item__body">
-              <H2 color={colors.blue}>#1 Nullist sõitma</H2>
-              <p>See koolitus sobib sulle, kui sa pole mitte kunagi mootorattaga sõitnud ja tahaksid proovida koos kogenud juhendajaga.</p>
-              <p>Sisaldab mootorratta kasutamist.</p>
-              <p css={`margin-bottom: 2rem; font-weight: 700; color: ${colors.blue};`}>Hind: 150 €</p>
-              <ButtonLink to="/kontakt">
-                <span role="img" aria-label="hand">👍</span> Soovin osaleda
-              </ButtonLink>
-            </div>
-          </div>
-          <div className="course-item">
-            <img className="course-item__image" src={imageSecondPackage} alt="motokoolitus" />
-            <div className="course-item__body">
-              <H2 color={colors.blue}>#2 Kordame üle</H2>
-              <p>Oled just load saanud või on sul need ammu olemas, aga oled sõitmise unustanud – see koolitus on just sinule.</p>
-              <p>Võimalus rentida mootorratas koolituse ajaks.</p>
-              <p css={`margin-bottom: 2rem; font-weight: 700; color: ${colors.blue};`}>Hind: 120 €</p>
-              <ButtonLink to="/kontakt">
-                <span role="img" aria-label="hand">👍</span> Soovin osaleda
-              </ButtonLink>
-            </div>
-          </div>
-          <div className="course-item">
-            <img className="course-item__image" src={imageThirdPackage} alt="motokoolitus" />
-            <div className="courses__body">
-              <H2 color={colors.blue}>#3 Põlv maha</H2>
-              <p>Sul on juhiload juba ammu olemas ja ratas, millega sõita, kuid tahaksid oma sõiduoskusi parandada.</p>
-              <p css={`margin-bottom: 2rem; font-weight: 700; color: ${colors.blue};`}>Hind: 120 €</p>
-              <ButtonLink to="/kontakt">
-                <span role="img" aria-label="hand">👍</span> Soovin osaleda
-              </ButtonLink>
-            </div>
-          </div>
-          <div className="course-item">
-            <img className="course-item__image" src={imageMasterClass} alt="motokoolitus" />
-            <div className="course-item__body">
-              <H2 color={colors.blue}>#Meistriklass </H2>
-              <p>Oled kogenud ringrajasõitja ja soovid endast ning oma rattast maksimumi võtta.</p>
-              <p>Korraldame ühiseid treeningpäevi Itaalias.</p>
-              <p css={`margin-bottom: 2rem; font-weight: 700; color: ${colors.blue};`}>Hind: 2300 €</p>
-              <ButtonLink to="/kontakt">
-                <span role="img" aria-label="hand">👍</span> Soovin osaleda
-              </ButtonLink>
-            </div>
-          </div>
-            <div className="course-item">
-              <H2 color={colors.blue}>Veel koolitusi nõudmisel:</H2>
-              <PageContent content={content} />
-              <div css={`padding-top: 1rem; padding-bottom: 2rem;`}>
-                <ButtonLink to="/kontakt">
-                  <span role="img" aria-label="hand">👍</span> Soovin lisainfot
-                </ButtonLink>
-              </div>
-          </div>
+      <SectionWithBackground
+        backgroundImage={`url(${imageMasterClass})`}
+      >
+        <div css={`
+          height: 100%;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        `}>
+          <H1WidthBackground>{title}</H1WidthBackground>
+          <h3 css={`display: none;`}>{description}</h3>
         </div>
-      </section>
+      </SectionWithBackground>
+      <Grid>
+        <section className="courses">
+            <div className="courses__list">
+              <div className="course-item course-item--first">
+              <img className="course-item__image" src={imageMarko} alt="motokoolitus" />
+              <H2 color={colors.blue}>Instruktor Marko Rohtlaan</H2>
+              <p>Motokogemus 25 aastat. Olen õppinud mitmete maailmameistrite juures (Stephane Mertens, Terry Rymer, Oscar Rumi) ning võistelnud tipptiimides (Phase One Endrance, Diablo 666 Endurance, Azione Corse). Koolitamise kogemus aastast 2004. Olen 15 aastat erinevaid koolitusi läbi viinud. Nõustan enamust Eesti tippringrajasõitjaist ning ka algajaid (C-klass).</p>
+                <p>Oled valmis natuke rohkem tskilisõidust teada saama? Tunned end mõnes sõiduolukorras ebakindlalt? Tahad endast ja oma rattast parima välja pigistada?</p>
+                <p>Tutvu allolevate koolitustega võta ühendust!</p>
+              </div>
+            <div className="course-item">
+              <img className="course-item__image" src={imageFirstPackage} alt="motokoolitus"/>
+              <div className="course-item__body">
+                <H2 color={colors.blue}>#1 Nullist sõitma</H2>
+                <p>See koolitus sobib sulle, kui sa pole mitte kunagi mootorattaga sõitnud ja tahaksid proovida koos kogenud juhendajaga.</p>
+                <p>Sisaldab mootorratta kasutamist.</p>
+                <p css={`margin-bottom: 2rem; font-weight: 700; color: ${colors.blue};`}>Hind: 150 €</p>
+                <ButtonContact onClick={() => { showForm(!formIsVisible); handleSubject(subject = "Nullist sõitma") }} >
+                  <span role="img" aria-label="hand">👍</span> Soovin osaleda
+                </ButtonContact>
+              </div>
+            </div>
+            <div className="course-item">
+              <img className="course-item__image" src={imageSecondPackage} alt="motokoolitus" />
+              <div className="course-item__body">
+                <H2 color={colors.blue}>#2 Kordame üle</H2>
+                <p>Oled just load saanud või on sul need ammu olemas, aga oled sõitmise unustanud – see koolitus on just sinule.</p>
+                <p>Võimalus rentida mootorratas koolituse ajaks.</p>
+                <p css={`margin-bottom: 2rem; font-weight: 700; color: ${colors.blue};`}>Hind: 120 €</p>
+                <ButtonContact onClick={() => { showForm(!formIsVisible); handleSubject(subject = "Kordame üle") }}>
+                  <span role="img" aria-label="hand">👍</span> Soovin osaleda
+                </ButtonContact>
+              </div>
+            </div>
+            <div className="course-item">
+              <img className="course-item__image" src={imageThirdPackage} alt="motokoolitus" />
+              <div className="courses__body">
+                <H2 color={colors.blue}>#3 Põlv maha</H2>
+                <p>Sul on juhiload juba ammu olemas ja ratas, millega sõita, kuid tahaksid oma sõiduoskusi parandada.</p>
+                <p css={`margin-bottom: 2rem; font-weight: 700; color: ${colors.blue};`}>Hind: 120 €</p>
+                <ButtonContact onClick={() => { showForm(!formIsVisible); handleSubject(subject = "Põlv maha") }}>
+                  <span role="img" aria-label="hand">👍</span> Soovin osaleda
+                </ButtonContact>
+              </div>
+            </div>
+            <div className="course-item">
+              <img className="course-item__image" src={imageMasterClass} alt="motokoolitus" />
+              <div className="course-item__body">
+                <H2 color={colors.blue}>#Meistriklass </H2>
+                <p>Oled kogenud ringrajasõitja ja soovid endast ning oma rattast maksimumi võtta.</p>
+                <p>Korraldame ühiseid treeningpäevi Itaalias.</p>
+                <p css={`margin-bottom: 2rem; font-weight: 700; color: ${colors.blue};`}>Hind: 2300 €</p>
+                <ButtonContact onClick={() => { showForm(!formIsVisible); handleSubject(subject = "Meistriklass") }}>
+                  <span role="img" aria-label="hand">👍</span> Soovin osaleda
+                </ButtonContact>
+              </div>
+            </div>
+              <div className="course-item">
+                <H2 color={colors.blue}>Veel koolitusi nõudmisel:</H2>
+                <PageContent content={content} />
+                <div css={`padding-top: 1rem; padding-bottom: 2rem;`}>
+                <ButtonContact onClick={() => { showForm(!formIsVisible); handleSubject(subject = "Nõudmisel koolitus") }}>
+                  <span role="img" aria-label="hand">👍</span> Soovin lisainfot
+                </ButtonContact>
+                </div>
+            </div>
+          </div>
+        </section>
       </Grid>
+      <div>
+        <StyledForm
+          name="koolitus"
+          method="post"
+          action="/kontakt/vorm-saadetud"
+          data-netlify="true"
+          data-netlify-honeypot="bot-field"
+          style={formInlineStyles}
+        >
+          <ButtonClose
+            onClick={() => showForm(!formIsVisible)}
+            css={`position: absolute; right: .5rem; top: 1rem;`}
+          >
+            <span role="img" aria-label="close">❌</span>
+          </ButtonClose>
+          {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
+          <input type="hidden" name="form-name" value="contact" />
+          <div hidden>
+            <label>Ära seda täida:{' '}
+              <input name="bot-field" />
+            </label>
+          </div>
+          <label htmlFor={'name'}>Sinu nimi</label>
+          <input
+            type={'text'}
+            name={'name'}
+            id={'name'}
+            required={true}
+          />
+          <label htmlFor={'email'}>E-mail</label>
+          <input
+            type={'email'}
+            name={'email'}
+            id={'email'}
+            required={true}
+          />
+          <label htmlFor={'phone'}>Telefon</label>
+          <input
+            type={'phone'}
+            name={'phone'}
+            id={'phone'}
+            required={true}
+          />
+          <label htmlFor={'subject'}>Teema</label>
+          <input
+            type={'subject'}
+            name={'subject'}
+            id={'subject'}
+            value={`${subject}`}
+            required={true}
+          />
+          <label htmlFor={'message'}>Sõnum</label>
+          <textarea
+            name={'message'}
+            id={'message'}
+            required={true}
+          />
+          <button type="submit">Saada</button>
+        </StyledForm>
+      </div>
     </div>
   )
 }

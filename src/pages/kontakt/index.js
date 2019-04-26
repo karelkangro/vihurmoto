@@ -110,22 +110,27 @@ export default class Index extends React.Component {
           padding-top: 2rem;
           padding-bottom: 2rem;
         `}>
-          <h1>Jäta teade</h1>
+          <H2WidthBoxShadow color={colors.blue} borderheight={`0px 0.333rem 0px 0px`} border={colors.blue} css={`text-align: center;`}>Jäta teade</H2WidthBoxShadow>
           <form
             name="kontakt"
             method="post"
-            action="/kontakt/thanks/"
+            action="/kontakt/vorm-saadetud/"
             data-netlify="true"
             data-netlify-honeypot="bot-field"
             onSubmit={this.handleSubmit}
             css={`
+              width: 280px;
+              max-width: 100%;
+              height: 400px;
+              max-height: 100%;
               display: flex;
               justify-content: center;
               flex-direction: column;
               align-items: center;
-              padding-top: 2rem;
-              padding-bottom: 2rem;
-              min-width: 280px;
+              padding: 2rem 1rem;
+              background: white;
+              border-radius: 2rem;
+              margin-top: 1rem;
             `}
           >
             {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
