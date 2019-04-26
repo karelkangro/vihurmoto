@@ -8,6 +8,7 @@ import Content, { HTMLContent } from '../components/Content'
 import styled from 'styled-components'
 import screen from '../components/styled/screen';
 import colors from '../components/styled/colors';
+import { ButtonSend } from '../components/styled/buttons';
 import { H1WidthBackground, H2 } from '../components/styled/typography'
 import SectionWithBackground from '../components/styled/SectionWithBackground'
 
@@ -46,6 +47,7 @@ const ButtonContact = styled.button`
   font-weight: bold;
   padding: 1.5rem;
   border-radius: 2rem;
+  border: none;
   color: ${colors.blue};
   text-decoration: none;
   text-align: center;
@@ -164,9 +166,9 @@ export const KoolitusedTemplate = ({ title, content, description, contentCompone
       </Grid>
       <div>
         <StyledForm
-          name="koolitus"
+          name="koolitused"
           method="post"
-          action="/kontakt/vorm-saadetud"
+          action="/kontakt/vorm-saadetud/"
           data-netlify="true"
           data-netlify-honeypot="bot-field"
           style={formInlineStyles}
@@ -178,7 +180,7 @@ export const KoolitusedTemplate = ({ title, content, description, contentCompone
             <span role="img" aria-label="close">❌</span>
           </ButtonClose>
           {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
-          <input type="hidden" name="form-name" value="contact" />
+          <input type="hidden" name="form-name" value="koolitused" />
           <div hidden>
             <label>Ära seda täida:{' '}
               <input name="bot-field" />
@@ -219,7 +221,7 @@ export const KoolitusedTemplate = ({ title, content, description, contentCompone
             id={'message'}
             required={true}
           />
-          <button type="submit">Saada</button>
+          <ButtonSend type="submit">Saada</ButtonSend>
         </StyledForm>
       </div>
     </div>

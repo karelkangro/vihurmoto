@@ -5,6 +5,7 @@ import { H2WidthBoxShadow } from '../../components/styled/typography'
 // eslint-disable-next-line
 import { css } from 'styled-components'
 import colors from '../../components/styled/colors';
+import { ButtonSend } from '../../components/styled/buttons'
 import { navigate } from 'gatsby-link'
 
 
@@ -134,7 +135,7 @@ export default class Index extends React.Component {
             `}
           >
             {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
-            <input type="hidden" name="form-name" value="contact" />
+            <input type="hidden" name="form-name" value="kontakt" />
             <div hidden>
               <label>
                 Ära seda täida:{' '}
@@ -180,9 +181,9 @@ export default class Index extends React.Component {
               id={'message'}
               required={true}
             />
-            <button type="submit">
+            <ButtonSend type="submit">
               Saada
-            </button>
+            </ButtonSend>
           </form>
         </section>
       </Layout>
