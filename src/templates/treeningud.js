@@ -39,9 +39,14 @@ export const TrainingPageTemplate = ({
           <H2WidthBoxShadow color={colors.blue} borderheight={`0px 0.333rem 0px 0px`} border={colors.red} css={`text-align: center;`}>
             Trennid lastele ja noortele
           </H2WidthBoxShadow>
+          <p>Vihur motoklubi tegutseb suure eesmärgiga koolitada välja uus põlvkond
+            andekaid noori motosportlasi, kes nii Eestis, kui maailmas suuri tegusid teeksid.
+            Too oma motospordist huvituv 5-16a laps trenni! Õpime ringsajasõitu, jäärada, supermotot.
+          </p>
           <PageContent content={content} />
+          <p>Meistrid tulevad siit!</p>
         </section>
-      </Grid> 
+      </Grid>
     </div>
   )
 }

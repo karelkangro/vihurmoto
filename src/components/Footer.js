@@ -74,6 +74,7 @@ const Footer = class extends React.Component {
           <FooterNavLink to="/blog">Uudised</FooterNavLink>
           <FooterNavLink to="/koolitused">Koolitused</FooterNavLink>
           <FooterNavLink to="/treeningud">Treeningud noortele</FooterNavLink>
+          <FooterNavLink to="/trackday">Vihur Trackday</FooterNavLink>
           <FooterNavLink to="/kontakt">Kontakt</FooterNavLink>
         </FooterNav>
         <p css={`text-align: center; color: ${colors.white}`}>

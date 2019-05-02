@@ -17,3 +17,27 @@ export const ButtonSend = styled.button`
     box-shadow: 0 1rem 2rem 0 ${colors.blueShadow};
   }
 `;
+
+export const ButtonContact = styled.button`
+  display: block;
+  font-weight: bold;
+  padding: 1.5rem;
+  border-radius: 2rem;
+  border: none;
+  color: ${colors.blue};
+  text-decoration: none;
+  text-align: center;
+  box-shadow: 0 .7rem 1rem 0 ${colors.blueShadow};
+  :hover {
+    transition: all .22s ease-out;
+    box-shadow: 0 1rem 2rem 0 ${colors.blueShadow};
+  }
+`;
+
+export const ButtonClose = styled.button`
+  position: absolute;
+  right: .5rem;
+  top: 1rem;
+  border: none;
+  background: none;
+`

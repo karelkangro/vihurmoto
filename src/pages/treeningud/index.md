@@ -4,7 +4,7 @@ path: /treeningud
 image: /img/akadeemia.jpg
 title: Noorte treeningud
 ---
-Korraldame treeninguid motospordist huvituvatele 5-16 a lastele ning noortele. Ühistreeningud toimuvad erinevatel Eesti ringradadel kord kuus, Pärnus regulaarselt kord nädalas.
+Ühistreeningud toimuvad erinevatel Eesti ringradadel kord kuus, Pärnus regulaarselt kord nädalas.
 
 Eeskuju on nakkav ja suur motivaator ükskõik, millises sporditegemises. Sõpradega koos on alati lõbusam ja perega koos kindlam tegutseda.
 Muidugi igaühest ei pea saama professionaalset võidusõitjat. Mõnest lapsepõlves motopisikuga nakatanust võib saada hoopis väga hea mehhaanik, insener, elektroonik, kohtunik, võistluste korraldaja või motospordi toetaja.

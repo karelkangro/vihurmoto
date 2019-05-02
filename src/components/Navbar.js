@@ -168,9 +168,9 @@ const Navbar = class extends React.Component {
             className={`${this.state.navBarActiveClass}`}
           >
             <NavLinkWrapper>
-              <NavLink className="navbar-item" to="/">
+              {/* <NavLink className="navbar-item" to="/">
                 AVALEHT
-              </NavLink>
+              </NavLink> */}
               <NavLink className="navbar-item" to="/blog">
                 UUDISED
               </NavLink>
@@ -179,6 +179,9 @@ const Navbar = class extends React.Component {
               </NavLink>
               <NavLink className="navbar-item" to="/treeningud">
                 TREENINGUD
+              </NavLink>
+              <NavLink className="navbar-item" to="/trackday">
+                TRACKDAY
               </NavLink>
               <NavLink className="navbar-item" to="/kontakt">
                 KONTAKT

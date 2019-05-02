@@ -16,7 +16,7 @@ const SectionWithBackground = styled.section`
   background-size: cover;
   ${screen.small`
     height: 31.4rem;
-    background-position: left center;
+    background-position: ${props => props.backgroundPositionScreenSmall};
     background-attachment: fixed;
   `}
 `;

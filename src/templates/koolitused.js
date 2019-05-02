@@ -9,33 +9,9 @@ import styled from 'styled-components'
 import colors from '../components/styled/colors';
 import { Grid } from '../components/styled/grid';
 import { StyledForm } from '../components/styled/form';
-import { ButtonSend } from '../components/styled/buttons';
+import { ButtonSend, ButtonContact, ButtonClose } from '../components/styled/buttons';
 import { H1WidthBackground, H2 } from '../components/styled/typography'
 import SectionWithBackground from '../components/styled/SectionWithBackground'
-
-const ButtonContact = styled.button`
-  display: block;
-  font-weight: bold;
-  padding: 1.5rem;
-  border-radius: 2rem;
-  border: none;
-  color: ${colors.blue};
-  text-decoration: none;
-  text-align: center;
-  box-shadow: 0 .7rem 1rem 0 ${colors.blueShadow};
-  :hover {
-    transition: all .22s ease-out;
-    box-shadow: 0 1rem 2rem 0 ${colors.blueShadow};
-  }
-`;
-
-const ButtonClose = styled.button`
-  position: absolute;
-  right: .5rem;
-  top: 1rem;
-  border: none;
-  background: none;
-`
 
 export const KoolitusedTemplate = ({ title, content, description, contentComponent }) => {
   const [formIsVisible, showForm] = useState(false);
@@ -69,8 +45,14 @@ export const KoolitusedTemplate = ({ title, content, description, contentCompone
       <Grid>
         <section className="courses">
             <div className="courses__list">
-              <div className="course-item course-item--first">
+            <div className="course-item course-item--first">
               <img className="course-item__image" src={imageMarko} alt="motokoolitus" />
+              <H2 color={colors.blue}>Tule koolitusele!</H2>
+              <p>Kui sul pole kindlat tunnet sadulas, tule koolitusele. Vihur viib läbi
+                õppepäevi igal tasandil sõitjale, erinevate raskusastmetega radadel, tänavasõidust
+                rolleri lenksus kuni kõige ekstreemsemate motospordi vormideni.<br/>
+                Koolitused toimuvad mai - oktoober
+              </p>
               <H2 color={colors.blue}>Instruktor Marko Rohtlaan</H2>
               <p>Motokogemus 25 aastat. Olen õppinud mitmete maailmameistrite juures (Stephane Mertens, Terry Rymer, Oscar Rumi) ning võistelnud tipptiimides (Phase One Endrance, Diablo 666 Endurance, Azione Corse). Koolitamise kogemus aastast 2004. Olen 15 aastat erinevaid koolitusi läbi viinud. Nõustan enamust Eesti tippringrajasõitjaist ning ka algajaid (C-klass).</p>
                 <p>Oled valmis natuke rohkem tskilisõidust teada saama? Tunned end mõnes sõiduolukorras ebakindlalt? Tahad endast ja oma rattast parima välja pigistada?</p>
