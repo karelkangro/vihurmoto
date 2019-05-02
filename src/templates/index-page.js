@@ -16,21 +16,8 @@ import colors from '../components/styled/colors'
 
 // styled components
 import { H1WidthBackground, H2WidthBoxShadow, H2 } from '../components/styled/typography'
+import { ButtonLink } from '../components/styled/buttons'
 import SectionWithBackground from '../components/styled/SectionWithBackground'
-
-const ButtonLink = styled(Link)`
-  font-weight: bold;
-  padding: 2rem;
-  border-radius: 2rem;
-  color: ${colors.blue};
-  text-decoration: none;
-  text-align: center;
-  box-shadow: 0 .7rem 1rem 0 ${colors.blueShadow};
-  :hover {
-    transition: all .22s ease-out;
-    box-shadow: 0 1rem 2rem 0 ${colors.blueShadow};
-  }
-`;
 
 const SectionCalendar = styled.section`
   display: grid;

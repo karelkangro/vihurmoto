@@ -19,7 +19,9 @@ const BlogContent = styled.section`
   padding-bottom: 4rem;
 `;
 
+
 const TagLink = styled(Link)`
+  display: block;
   font-weight: bold;
   padding: .5rem;
   border-radius: 1rem;
@@ -53,17 +55,22 @@ export const BlogPostTemplate = ({
         <p>{description}</p>
         <PostContent content={content} />
         {tags && tags.length ? (
-          <div>
+          <div css={`display: grid; grid-template-rows: 1fr 1fr 1fr;`}>
             <h4>Sildid</h4>
             <ul css={`list-style: none; margin: 0; padding: 0;`}>
               {tags.map(tag => (
-                <li key={tag + `tag`}>
+                <li key={tag + `tag`} css={`display: flex;`}>
                   <TagLink to={`/tags/${kebabCase(tag)}/`}>{tag}</TagLink>
                 </li>
               ))}
             </ul>
           </div>
         ) : null}
+        <div>
+          <Link to="/blog" color={colors.blue}>
+            <span role="img" aria-label="hand">👈</span> Tagasi blogisse
+          </Link>
+        </div>
       </div>
       <div></div>
     </BlogContent>

@@ -51,7 +51,7 @@ export const KoolitusedTemplate = ({ title, content, description, contentCompone
               <p>Kui sul pole kindlat tunnet sadulas, tule koolitusele. Vihur viib läbi
                 õppepäevi igal tasandil sõitjale, erinevate raskusastmetega radadel, tänavasõidust
                 rolleri lenksus kuni kõige ekstreemsemate motospordi vormideni.<br/>
-                Koolitused toimuvad mai - oktoober
+                Koolitused toimuvad maist oktoobrini.
               </p>
               <H2 color={colors.blue}>Instruktor Marko Rohtlaan</H2>
               <p>Motokogemus 25 aastat. Olen õppinud mitmete maailmameistrite juures (Stephane Mertens, Terry Rymer, Oscar Rumi) ning võistelnud tipptiimides (Phase One Endrance, Diablo 666 Endurance, Azione Corse). Koolitamise kogemus aastast 2004. Olen 15 aastat erinevaid koolitusi läbi viinud. Nõustan enamust Eesti tippringrajasõitjaist ning ka algajaid (C-klass).</p>
