@@ -4,7 +4,8 @@ import colors from './colors';
 export const ButtonSend = styled.button`
   display: block;
   font-weight: bold;
-  padding: .5rem 1rem;
+  padding: 1rem 1rem;
+  min-width: 100px;
   border-radius: 2rem;
   border: none;
   color: ${colors.blue};

@@ -91,19 +91,34 @@ export const TrackdayPageTemplate = ({
           required={true}
         />
         <label htmlFor={'select'}>TrackDay päev</label>
-        <select
+        <select className="select"
           type={'select'}
           name={'select'}
           id={'select'}
           required={true}
           css={`margin-bottom: .5rem;`}
         >
-          <option value="">--Palun vali koolitus--</option>
-          <option value="15.0" selected>15.06 Aravete kardirada - päripäeva</option>
-          <option value="20.07">20.07 Aravete kardirada - vastupäeva</option>
-          <option value="18.08">18.08 Rapla kardirada</option>
+          <option value="">- Vali koolitus -</option>
+          <option value="15.06 Aravete" selected>15.06 Aravete kardirada - päripäeva</option>
+          <option value="20.07 Aravete">20.07 Aravete kardirada - vastupäeva</option>
+          <option value="18.08 Rapla">18.08 Rapla kardirada</option>
         </select>
-        <label htmlFor={'message'}>Sõnum</label>
+        <label htmlFor={'class'}>Klass</label>
+        <select className="select"
+          type={'class'}
+          name={'class'}
+          id={'class'}
+          required={true}
+          css={`margin-bottom: .5rem;`}
+        >
+          <option value="">- Vali klass -</option>
+          <option value="Bike" selected>Bike</option>
+          <option value="Naked">Naked</option>
+          <option value="Supermoto">Supermoto</option>
+          <option value="Naised">Naised</option>
+          <option value="Noored">Noored</option>
+        </select>
+        <label htmlFor={'message'}>Lisainfo (nt tsikkel)</label>
         <textarea
           name={'message'}
           id={'message'}

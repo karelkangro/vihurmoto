@@ -23,7 +23,7 @@ kohasõitudes ja osalejad saavad premeeritud!
 ### Bike, Naked, Supermoto, Naised ja Noored.
 
 Vihur Trackday on parim sõitjale, kes tahaks pisut
-rohkem teravus kui tänavasõit aga mitte päris
+rohkem teravust kui tänavasõit aga mitte päris
 täismahus motoringrada.
 
 Koolitust viib läbi Marko Rohtlaan.
