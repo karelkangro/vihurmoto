@@ -10,6 +10,8 @@ const SectionWithBackground = styled.section`
   padding: 0;
   background-image: ${props => props.backgroundImage};
   background-position: center center;
+  background-position: ${props => props.backgroundPosition};
+  background-attachment: ${props => props.backgroundAttachment};
   background-repeat: no-repeat;
   background-size: cover;
   ${screen.small`
