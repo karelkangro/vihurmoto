@@ -45,6 +45,7 @@ export const H1WidthBackground = styled.h1`
 export const H2WidthBoxShadow = styled.h2`
   ${sharedH2Styles}
   ${sharedBorderStyles}
+  margin-bottom: .5rem;
 `
 export const H2 = styled.h2`
   ${sharedH2Styles}

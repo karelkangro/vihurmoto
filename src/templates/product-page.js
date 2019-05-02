@@ -19,89 +19,79 @@ export const ProductPageTemplate = ({
   pricing,
 }) => (
   <section>
+    <div
+      style={{
+        backgroundImage: `url(${
+          !!image.childImageSharp
+            ? image.childImageSharp.fluid.src
+            : image
+        })`,
+      }}
+    >
+      <h2
+        style={{
+          boxShadow: '0.5rem 0 0 #f40, -0.5rem 0 0 #f40',
+          backgroundColor: '#f40',
+          color: 'white',
+          padding: '1rem',
+        }}
+      >
+        {title}
+      </h2>
+    </div>
+    <div>
+      <div>
+        <h3>
+          {heading}
+        </h3>
+        <p>{description}</p>
+      </div>
+    </div>
+    <Features gridItems={intro.blurbs} />
+    <div>
+      <div>
+        <h3>
+          {main.heading}
+        </h3>
+        <p>{main.description}</p>
+      </div>
+    </div>
     <div>
       <div>
         <div>
           <div>
-            <div>
-              <div
-                style={{
-                  backgroundImage: `url(${
-                    !!image.childImageSharp
-                      ? image.childImageSharp.fluid.src
-                      : image
-                  })`,
-                }}
-              >
-                <h2
-                  style={{
-                    boxShadow: '0.5rem 0 0 #f40, -0.5rem 0 0 #f40',
-                    backgroundColor: '#f40',
-                    color: 'white',
-                    padding: '1rem',
-                  }}
-                >
-                  {title}
-                </h2>
-              </div>
-              <div>
-                <div>
-                  <h3>
-                    {heading}
-                  </h3>
-                  <p>{description}</p>
-                </div>
-              </div>
-              <Features gridItems={intro.blurbs} />
-              <div>
-                <div>
-                  <h3>
-                    {main.heading}
-                  </h3>
-                  <p>{main.description}</p>
-                </div>
-              </div>
-              <div>
-                <div>
-                  <div>
-                    <div>
-                      <article>
-                        <PreviewCompatibleImage imageInfo={main.image1} />
-                      </article>
-                    </div>
-                    <div>
-                      <article>
-                        <PreviewCompatibleImage imageInfo={main.image2} />
-                      </article>
-                    </div>
-                  </div>
-                  <div>
-                    <article>
-                      <PreviewCompatibleImage imageInfo={main.image3} />
-                    </article>
-                  </div>
-                </div>
-              </div>
-              <Testimonials testimonials={testimonials} />
-              <div
-                style={{
-                  backgroundImage: `url(${
-                    fullImage.childImageSharp
-                      ? fullImage.childImageSharp.fluid.src
-                      : fullImage
-                  })`,
-                }}
-              />
-              <h2>
-                {pricing.heading}
-              </h2>
-              <p>{pricing.description}</p>
-              <Pricing data={pricing.plans} />
-            </div>
+            <article>
+              <PreviewCompatibleImage imageInfo={main.image1} />
+            </article>
           </div>
+          <div>
+            <article>
+              <PreviewCompatibleImage imageInfo={main.image2} />
+            </article>
+          </div>
+        </div>
+        <div>
+          <article>
+            <PreviewCompatibleImage imageInfo={main.image3} />
+          </article>
         </div>
       </div>
     </div>
+    <Testimonials testimonials={testimonials} />
+    <div
+      style={{
+        backgroundImage: `url(${
+          fullImage.childImageSharp
+            ? fullImage.childImageSharp.fluid.src
+            : fullImage
+        })`,
+      }}
+    />
+    <h2>
+      {pricing.heading}
+    </h2>
+    <p>{pricing.description}</p>
+    <Pricing data={pricing.plans} />
   </section>
 )
 

@@ -6,41 +6,12 @@ import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 // styles
 import styled from 'styled-components'
-import screen from '../components/styled/screen';
 import colors from '../components/styled/colors';
+import { Grid } from '../components/styled/grid';
+import { StyledForm } from '../components/styled/form';
 import { ButtonSend } from '../components/styled/buttons';
 import { H1WidthBackground, H2 } from '../components/styled/typography'
 import SectionWithBackground from '../components/styled/SectionWithBackground'
-
-const Grid = styled.section`
-  display: grid;
-  grid-template-columns: 1fr;
-  align-items: center;
-  align-items: flex-start;
-  grid-gap: 1rem;
-  justify-content: center;
-  ${screen.medium`grid-template-columns: 768px;`};
-`;
-
-const StyledForm = styled.form`
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  width: 280px;
-  max-width: 100%;
-  height: 400px;
-  max-height: 100%;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  padding: 2rem 1rem;
-  background: white;
-  border-radius: 2rem;
-  z-index: 10;
-  box-shadow: 0 3rem 5rem 0 ${colors.blueShadow};
-  ${screen.medium``};
-`;
 
 const ButtonContact = styled.button`
   display: block;
@@ -70,7 +41,7 @@ export const KoolitusedTemplate = ({ title, content, description, contentCompone
   const [formIsVisible, showForm] = useState(false);
   let [subject, handleSubject ] = useState('Täpsusta teema')
   const formInlineStyles = {
-    transform: formIsVisible ? 'translate(-50%, -50%)' : 'translate(-200%, -200%)'
+    transform: formIsVisible ? 'translate(-50%, -50%)' : 'translate(-300%, -300%)'
   };
   const PageContent = contentComponent || Content
   const imageFirstPackage = '/img/school-first-package.jpg'
@@ -103,7 +74,7 @@ export const KoolitusedTemplate = ({ title, content, description, contentCompone
               <H2 color={colors.blue}>Instruktor Marko Rohtlaan</H2>
               <p>Motokogemus 25 aastat. Olen õppinud mitmete maailmameistrite juures (Stephane Mertens, Terry Rymer, Oscar Rumi) ning võistelnud tipptiimides (Phase One Endrance, Diablo 666 Endurance, Azione Corse). Koolitamise kogemus aastast 2004. Olen 15 aastat erinevaid koolitusi läbi viinud. Nõustan enamust Eesti tippringrajasõitjaist ning ka algajaid (C-klass).</p>
                 <p>Oled valmis natuke rohkem tskilisõidust teada saama? Tunned end mõnes sõiduolukorras ebakindlalt? Tahad endast ja oma rattast parima välja pigistada?</p>
-                <p>Tutvu allolevate koolitustega võta ühendust!</p>
+                <p>Tutvu allolevate koolitustega ja võta julgelt ühendust!</p>
               </div>
             <div className="course-item">
               <img className="course-item__image" src={imageFirstPackage} alt="motokoolitus"/>

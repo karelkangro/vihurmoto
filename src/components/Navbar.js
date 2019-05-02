@@ -177,6 +177,9 @@ const Navbar = class extends React.Component {
               <NavLink className="navbar-item" to="/koolitused">
                 KOOLITUSED
               </NavLink>
+              <NavLink className="navbar-item" to="/treeningud">
+                TREENINGUD
+              </NavLink>
               <NavLink className="navbar-item" to="/kontakt">
                 KONTAKT
               </NavLink>
