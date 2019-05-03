@@ -39,7 +39,6 @@ export const KoolitusedTemplate = ({ title, content, description, contentCompone
           align-items: center;
         `}>
           <H1WidthBackground>{title}</H1WidthBackground>
-          <h3 css={`display: none;`}>{description}</h3>
         </div>
       </SectionWithBackground>
       <Grid>

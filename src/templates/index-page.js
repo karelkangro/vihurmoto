@@ -1,13 +1,12 @@
 // libraries
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Link, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
 // eslint-disable-next-line
 import styled, { css } from 'styled-components';
 
 // components
 import Layout from '../components/Layout'
-// import Features from '../components/Features'
 import BlogRoll from '../components/BlogRoll'
 
 // style utils
@@ -24,10 +23,6 @@ const SectionCalendar = styled.section`
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   grid-gap: 1rem;
   align-items: flex-start;
-  /* ${screen.small`
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  `} */
-  /* grid-auto-rows: 1px; */
 `;
 
 const CalendarCard = styled.div`
@@ -94,18 +89,34 @@ export const IndexPageTemplate = ({
       </div>
     </SectionWithBackground>
     <section css={`display: flex; flex-direction: column; justify-content: center; align-items: center; padding-bottom: 5rem;`}>
-        <H2WidthBoxShadow color={colors.blue} borderheight={`0px 0.333rem 0px 0px`} border={colors.red} css={`text-align: center;`}>{mainpitch.title}</H2WidthBoxShadow>
-        <p css={`text-align: center; color: ${colors.blue}; max-width: 75vh; margin-bottom: 3rem;`}>{mainpitch.description}</p>
-        <h3>
-          <ButtonLink
-            to="/kontakt"
-            color={colors.blue}
-          > <span role="img" aria-label="hand">👉</span> Võta ühendust</ButtonLink>
-        </h3>
+      <H2WidthBoxShadow
+        color={colors.blue}
+        borderheight={`0px 0.333rem 0px 0px`}
+        border={colors.red} css={`text-align: center;`}
+      >
+        {mainpitch.title}
+      </H2WidthBoxShadow>
+      <p css={`text-align: center; color: ${colors.blue}; max-width: 75vh; margin-bottom: 3rem;`}>
+        {mainpitch.description}
+      </p>
+      <h3>
+      <ButtonLink
+        to="/kontakt"
+        color={colors.blue}
+      >
+        <span role="img" aria-label="hand">👉</span> Võta ühendust
+      </ButtonLink>
+      </h3>
     </section>
     <section css={`padding-bottom: 4rem;`}>
       <div css={`display: flex; justify-content: center; margin-bottom: 2rem;`}>
-        <H2WidthBoxShadow color={colors.blue} borderheight={`0px 0.333rem 0px 0px`} border={colors.blue} css={`text-align: center;`}>Kalender</H2WidthBoxShadow>
+        <H2WidthBoxShadow
+          color={colors.blue}
+          borderheight={`0px 0.333rem 0px 0px`}
+          border={colors.blue} css={`text-align: center;`}
+        >
+          Kalender
+        </H2WidthBoxShadow>
       </div>
       <SectionCalendar>
         <CalendarCard>
