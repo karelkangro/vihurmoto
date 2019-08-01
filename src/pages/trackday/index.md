@@ -12,7 +12,7 @@ kui toimub kokku 3 etappi.
 
 ### 15.06 Aravete kardirada - päripäeva
 ### 20.07 Aravete kardirada - vastupäeva
-### 18.08 Rapla kardirada
+### 11.08 Pärnu Auto24Ring
 
 Vihur Trackday puhul on tegemist eelkõige
 koolituse ja sõidutehnika lihvimisega kui

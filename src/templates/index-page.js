@@ -187,9 +187,9 @@ export const IndexPageTemplate = ({
                 <div>Rapla</div>
               </CalendarItem>
               <CalendarItem>
-                <CalendarDate>18</CalendarDate>
+                <CalendarDate>11</CalendarDate>
                 <div>Vihurmoto TrackDay</div>
-                <div>Rapla kardirada</div>
+                <div>Pärnu Auto24Ring</div>
               </CalendarItem>
               <CalendarItem>
                 <CalendarDate>24/25</CalendarDate>

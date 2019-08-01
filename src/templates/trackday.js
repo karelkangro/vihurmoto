@@ -101,7 +101,7 @@ export const TrackdayPageTemplate = ({
           <option value="">- Vali koolitus -</option>
           <option value="15.06 Aravete" selected>15.06 Aravete kardirada - päripäeva</option>
           <option value="20.07 Aravete">20.07 Aravete kardirada - vastupäeva</option>
-          <option value="18.08 Rapla">18.08 Rapla kardirada</option>
+          <option value="11.08 Pärnu">18.08 Auto24Ring</option>
         </select>
         <label htmlFor={'class'}>Klass</label>
         <select className="select"
