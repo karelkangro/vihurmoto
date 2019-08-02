@@ -112,7 +112,8 @@ export const TrackdayPageTemplate = ({
           css={`margin-bottom: .5rem;`}
         >
           <option value="">- Vali klass -</option>
-          <option value="Bike" selected>Bike</option>
+          <option value="Bike street" selected>Bike street</option>
+          <option value="Bike pro">Bike pro</option>
           <option value="Naked">Naked</option>
           <option value="Supermoto">Supermoto</option>
           <option value="Naised">Naised</option>
