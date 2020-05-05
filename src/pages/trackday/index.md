@@ -5,14 +5,14 @@ image: /img/trackday.jpg
 title: Vihur Trackday
 ---
 
-Eelmisel aastal alguse saanud ja väga
+2018 aastal alguse saanud ja väga
 populaarseks osutunud koolitusvõistlus
-kardiradadel saab uue hoo aastal 2019,
-kui toimub kokku 3 etappi.
+kardiradadel jätkas hea hooaga 2019 aastal
+ja küllap ei jää tulemata ka 2020 hooaeg.
 
-### 15.06 Aravete kardirada - päripäeva
-### 20.07 Aravete kardirada - vastupäeva
-### 11.08 Audru ringrada, Auto24ring
+### Juuni, Aravete kardirada - päripäeva
+### Juuli, Aravete kardirada - vastupäeva
+### August, Audru ringrada, Auto24ring
 
 Vihur Trackday puhul on tegemist eelkõige
 koolituse ja sõidutehnika lihvimisega kui
@@ -28,4 +28,4 @@ täismahus motoringrada.
 
 Koolitust viib läbi Marko Rohtlaan.
 
-### Registreeru kohe, sest kohti on piiratud arv!
+### Registreerida hetkel veel ei saa!

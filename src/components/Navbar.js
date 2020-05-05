@@ -97,10 +97,13 @@ const SocialControl = styled.div`
 `;
 
 const NavLink = styled(Link)`
-  font-size: 1rem;
+  font-size: 2rem;
   padding: .5rem;
   margin-right: 0;
-  ${screen.medium`margin-right: 1rem;`}
+  ${screen.medium`
+    font-size: 1rem;
+    margin-right: 1rem;
+  `}
   text-transform: uppercase;
   text-decoration: none;
   color: ${colors.white};

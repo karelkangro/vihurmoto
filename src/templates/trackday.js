@@ -32,12 +32,12 @@ export const TrackdayPageTemplate = ({
         backgroundPositionScreenSmall={`center center`}
       >
         <div css={`
-        height: 100%;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      `}>
+          height: 100%;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        `}>
         </div>
       </SectionWithBackground>
       <Grid>
@@ -99,7 +99,7 @@ export const TrackdayPageTemplate = ({
           css={`margin-bottom: .5rem;`}
         >
           <option value="">- Vali koolitus -</option>
-          <option value="11.08 Audru Auto24ring" selected>11.08 Auto24ring</option>
+          {/* <option value="11.08 Audru Auto24ring" selected>11.08 Auto24ring</option> */}
         </select>
         <label htmlFor={'class'}>Klass</label>
         <select className="select"
